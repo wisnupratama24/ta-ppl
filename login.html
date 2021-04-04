@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <section>
+      <img src="./assets/img/1.png" data-speed="-5" class="layer" />
+      <img src="./assets/img/2.png" data-speed="5" class="layer" />
+      <img src="./assets/img/3.png" data-speed="2" class="layer" />
+      <img src="./assets/img/4.png" data-speed="6" class="layer" />
+      <img src="./assets/img/5.png" data-speed="8" class="layer" />
+      <img src="./assets/img/6.png" data-speed="-2" class="layer" />
+      <img src="./assets/img/7.png" data-speed="4" class="layer" />
+      <img src="./assets/img/8.png" data-speed="-9" class="layer" />
+      <img src="./assets/img/9.png" data-speed="6" class="layer" />
+      <img src="./assets/img/10.png" data-speed="-7" class="layer" />
+      <img src="./assets/img/11.png" data-speed="-5" class="layer" />
+      <img src="./assets/img/12.png" data-speed="5" class="layer" />
+      <form class="needs-validation">
+        <div class="position">
+          <h1 class="mb-5">Login</h1>
+          <!-- <small class="form-text mb-4" font-color="#ffffff">Bagi Kamu Yang Terdaftar Silahkan Login</small> -->
+          <div class="form-group">
+            <label for="exampleInputEmail1 " class="text-white">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1" class="text-white">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+          </div>
+          <div class="form-check">
+            <!-- <input type="checkbox" class="form-check-input" id="exampleCheck1" /> -->
+            <!-- <label class="form-check-label mb-4" for="exampleCheck1">Show Password</label> -->
+          </div>
+          <a class="btn btn-primary" href="" role="button">Login</a>
+          <a class="btn btn-primary" href="register.html" role="button">Daftar</a>
+        </div>
+      </form>
+      <!-- <h2 class="layer" data-speed="2">Parallax</h2> -->
+    </section>
+    <script type="text/javascript">
+      document.addEventListener("mousemove", parallax);
+      function parallax(e) {
+        this.querySelectorAll(".layer").forEach((Layer) => {
+          const speed = Layer.getAttribute("data-speed");
+
+          const x = (window.innerWidth - e.pageX * speed) / 100;
+          const y = (window.innerHeight - e.pageY * speed) / 100;
+
+          Layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
+        });
+      }
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -17,12 +17,17 @@
 }
 
 .post-item {
+  margin-bottom: 50px;
   overflow: hidden;
   border: 2px solid #ccc;
   border-radius: 10px;
   -webkit-box-shadow: 0px 0px 25px 5px rgba(1, 120, 255, 0.12);
   -moz-box-shadow: 0px 10px 25px 5px rgba(1, 120, 255, 0.12);
   box-shadow: 0px 10px 25px 5px rgba(1, 120, 255, 0.12);
+}
+.post-item .img-fluid {
+  width: 400px;
+  height: 200px;
 }
 
 .post-item-content {
@@ -33,14 +38,20 @@
   margin-bottom: 10px;
 }
 
+.kolom .p {
+  font-family: "Poppins";
+}
 .post-item-content h3 a {
   color: #333;
+  font-family: "Poppins";
 }
 
 .post-item-content .readmore {
+  position: absolute;
+  right: 40px;
   padding: 3px 30px;
   border-radius: 6px;
-  background: rgb(41, 182, 247);
+  background: rgb(241, 128, 23);
   color: #fff;
   display: inline-block;
   text-decoration: none;

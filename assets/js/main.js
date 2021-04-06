@@ -22,7 +22,7 @@ $(".slider").slick({
       breakpoint: 600,
       settings: {
         infinite: true,
-        slidesToShow: 2,
+        slidesToShow: 1,
         loop: true,
       },
     },
@@ -30,7 +30,7 @@ $(".slider").slick({
       breakpoint: 300,
       settings: {
         infinite: true,
-        slidesToShow: 2,
+        slidesToShow: 1,
         loop: true,
       }, // destroys slick
     },

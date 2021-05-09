@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --primary: #fffaf6;
+  --secondary: #fb9128;
+  --gray-300: #d1d5db;
+  --gray-100: #f3f4f6;
+  --gray-400: #9ca3af;
+
+  --title: #042852;
+}
+
+.btn-custom-primary {
+  background-color: var(--secondary);
+  border: 0;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+.btn-hover-primary:hover {
+  background-color: #f17c06;
+}
+
+body {
+  background-color: var(--primary);
+  font-family: "Poppins", sans-serif;
+}
+
+div.navbar {
+  height: 12vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.navbar ul {
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  list-style-type: none;
+}
+
+div.navbar ul li {
+  padding: 0 1.5rem;
+}
+
+.navbar .menus {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hamburger {
+  cursor: pointer;
+  display: none;
+}
+.hamburger div {
+  width: 27px;
+  height: 3px;
+  background-color: black;
+  margin: 4px 0;
+}
+
+.btn-register {
+  background-color: var(--gray-300);
+  border: 0;
+  margin-left: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+}
+
+/* Hero */
+.bg-hero img {
+  height: 300px;
+  border-radius: 1rem;
+}
+
+#hero .title h3 {
+  font-weight: 600;
+  line-height: 40px;
+  color: var(--title);
+}
+
+#hero .title p {
+  font-weight: 300;
+  color: #9ca3af;
+  line-height: 1.275rem;
+}
+
+/* End Hero */
+
+/* Lowongan */
+
+#lowongan {
+  padding-top: 6rem;
+}
+
+#lowongan .title h3 {
+  font-weight: 500;
+  font-size: 22px;
+}
+
+#lowongan .bg-lowongan {
+  background-color: var(--title);
+  height: 320px;
+  width: 350px;
+  border-radius: 0.5rem;
+}
+
+#lowongan .bg-lowongan h5 {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+#lowongan .bg-lowongan p {
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--gray-300);
+  line-height: 1.275rem;
+}
+
+#lowongan .bg-lowongan h6 {
+  color: #afafaf;
+}
+
+/* End Lowongan */
+
+/* Market Place */
+
+#marketplace {
+  padding-top: 6rem;
+}
+
+#marketplace .bg-marketplace {
+  /* background-color: #f59e0b; */
+  background-color: var(--title);
+  height: 300px;
+}
+
+/* End Marketplace */
+
+/* Bus Trans */
+
+#wisata {
+  padding-top: 8rem;
+  /* background-image: url(/assets/img/bg-wisata.svg); */
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+/* 
+#wisata .bg-wisata {
+} */
+#wisata .bg-wisata img {
+  height: 250px;
+  width: 350px;
+  border-radius: 1rem;
+}
+
+#wisata .bg-wisata .desc {
+  width: 340px;
+  margin-top: 1rem;
+}
+
+#wisata .bg-wisata .desc p {
+  font-size: 12px;
+  line-height: 1.275rem;
+  font-weight: 400;
+}
+
+/* End Bus Trans */
+
+/* Footer */
+footer {
+  margin-top: 8rem;
+  height: 20vh;
+  background-color: var(--title);
+}
+/* End Footer */
+
+/* penggunaan media query pada default tablet layout */
+/* @media only screen and (min-width: 768px) and (max-width: 991px) {
+} */
+
+.custom-input {
+  width: 100%;
+  height: 52px;
+  border-radius: 4px;
+  border: 1px #e5eef6 solid;
+  background-color: #fefefe;
+  margin-bottom: 24px;
+  padding-left: 20px;
+  outline: none;
+  color: #123049;
+  font-size: 16px;
+  color: #123049;
+}
+
+/* Login */
+
+.privacy-content {
+  font-size: 11px;
+  margin-top: 10px;
+  text-align: justify;
+}
+
+.news-login .title-news h6 {
+  margin-top: -7px;
+  width: 75%;
+  color: var(--title);
+  font-size: 18px;
+  line-height: 1.275rem;
+}
+
+.news-login .tanggal-news {
+  font-size: 12px;
+  margin-left: -10px;
+  font-weight: 500;
+  color: var(--gray-400);
+}
+
+/* End Login */
+
+/* penggunaan media query pada mobile layout */
+@media only screen and (min-width: 480px) and (max-width: 991px) {
+  .hamburger {
+    display: block;
+  }
+  .navbar-active {
+    display: none !important;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .navbar .menus {
+    background-color: var(--primary);
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    width: 100%;
+    top: 8vh;
+    left: 0;
+    justify-content: start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  div.navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  div.navbar ul li {
+    padding: 10px 0;
+  }
+  .button-right {
+    margin-top: 0.5rem;
+  }
+  .navbar {
+    display: block;
+  }
+
+  /* Hero */
+
+  .bg-hero img {
+    height: auto;
+    border-radius: 0.5rem;
+  }
+
+  #hero .title h3 {
+    margin-top: 1rem;
+    line-height: 30px;
+    font-size: 22px;
+  }
+
+  /* End Hero */
+
+  /* Marketplace */
+
+  #marketplace .bg-marketplace img {
+    display: none;
+  }
+
+  #marketplace .bg-marketplace {
+    text-align: center;
+  }
+}

@@ -148,6 +148,7 @@ div.navbar ul li {
   height: 320px;
   width: 350px;
   border-radius: 0.5rem;
+  width: 100%;
 }
 
 #lowongan .bg-lowongan h5 {
@@ -217,6 +218,38 @@ footer {
   margin-top: 8rem;
   height: 20vh;
   background-color: var(--title);
+  color: #fff;
+  padding-top: 40px;
+}
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.footer-content h3 {
+  text-align: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 0.2rem;
+}
+.socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+.socials a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.socials li {
+  margin: 0 15px;
 }
 /* End Footer */
 

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/vendor/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <title>Semarang</title>
   </head>
   <body>
@@ -60,25 +61,23 @@
           <h3 class="text-center">Informasi Lowongan Pekerjaan</h3>
         </div>
         <div class="owl-carousel d-flex justify-content-between mt-5">
-          
           <div class="bg-lowongan">
             <div class="p-5">
               <div class="title">
-                  <h5 class="fs-16 text-white">Frontend Developer</h5>
-                  <h6 class="text-capitalize text-secondary">PT. Mencari Cinta Sejati</h6>
+                <h5 class="fs-16 text-white">Frontend Developer</h5>
+                <h6 class="text-capitalize text-secondary">PT. Mencari Cinta Sejati</h6>
               </div>
               <div class="desc mt-3">
-                  <ul class="ml-0 pl-3 text-white" style="line-height: 1.75rem;">
-                    <li>Fulltime - Rp. 6.000.000,-</li>
-                      <li>Semarang</li>
-                  </ul>
+                <ul class="ml-0 pl-3 text-white" style="line-height: 1.75rem">
+                  <li>Fulltime - Rp. 6.000.000,-</li>
+                  <li>Semarang</li>
+                </ul>
               </div>
 
               <p class="fw-300">Lamar sebelum Selasa, 24 Juni 2021</p>
               <button class="btn btn-block btn-custom-primary mt-4 btn-hover-primary">Detail Lowongan</button>
             </div>
           </div>
-
         </div>
       </section>
 
@@ -140,7 +139,26 @@
       </section>
     </main>
 
-    <footer></footer>
+    <footer>
+      <div class="footer-content">
+        <h3>Follow us on social media</h3>
+        <ul class="socials">
+          <li>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+          </li>
+          <li></li>
+        </ul>
+      </div>
+    </footer>
 
     <script src="./assets/jquery-3.6.0.min.js"></script>
     <script src="./assets/vendor/owl-carousel/owl.carousel.min.js"></script>
@@ -154,9 +172,24 @@
         });
       });
       $(".owl-carousel").owlCarousel({
+        margin: 10,
         autoplay: true,
         autoplayHoverPause: true,
         loop: true,
+        responsive: {
+          0: {
+            items: 1,
+            nav: false,
+          },
+          300: {
+            items: 1,
+            nav: false,
+          },
+          1000: {
+            items: 3,
+            nav: false,
+          },
+        },
       });
     </script>
   </body>

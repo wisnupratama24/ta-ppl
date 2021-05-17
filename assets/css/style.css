@@ -213,6 +213,15 @@ div.navbar ul li {
 
 /* End Bus Trans */
 
+/* side Bar */
+.sidebar img {
+  width: 180px;
+  height: 80px;
+  float: left;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+/* End sidebar */
 /* Footer */
 footer {
   margin-top: 8rem;
@@ -220,6 +229,7 @@ footer {
   background-color: var(--title);
   color: #fff;
   padding-top: 40px;
+  position: relative;
 }
 .footer-content {
   display: flex;

@@ -214,6 +214,11 @@ div.navbar ul li {
 /* End Bus Trans */
 
 /* side Bar */
+
+.sidebar {
+  margin-bottom: 50px;
+  margin-top: 20;
+}
 .sidebar img {
   width: 180px;
   height: 80px;
@@ -319,10 +324,9 @@ input.custom-input-group:focus {
 /* Halaman Lowongan */
 #lowongan-kerja .lowongan-right {
   flex: 1;
-  position: fixed;
+  /* position: fixed; */
   right: 10%;
   width: 30%;
-  height: 100%;
   background-color: #fffaf6;
 }
 
@@ -371,6 +375,11 @@ input.custom-input-group:focus {
   .navbar {
     display: block;
   }
+  .sidebar {
+    display: block;
+    left: 0%;
+    width: 100%;
+  }
 
   /* Hero */
 
@@ -409,10 +418,12 @@ input.custom-input-group:focus {
   }
 
   #lowongan-kerja .daftar-lowongan {
-    padding-top: 40%;
+    padding-top: 10%;
   }
 
   #lowongan-kerja .wrap-lowongan {
     width: 100%;
+    height: auto;
+    position: relative;
   }
 }

@@ -218,6 +218,14 @@ div.navbar ul li {
 .sidebar {
   margin-bottom: 50px;
   margin-top: 20;
+  height: 100%;
+  overflow: auto;
+}
+
+.daftar-lowongan {
+  width: 750px;
+  float: left;
+  max-width: 100%;
 }
 .sidebar img {
   width: 100px;
@@ -378,6 +386,8 @@ input.custom-input-group:focus {
   }
   .sidebar {
     width: 100%;
+    height: auto;
+    position: relative;
   }
   .div {
     display: block;
@@ -426,5 +436,9 @@ input.custom-input-group:focus {
     width: 100%;
     height: auto;
     position: relative;
+  }
+  .daftar-lowongan {
+    width: 100%;
+    height: auto;
   }
 }

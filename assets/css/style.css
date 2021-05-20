@@ -220,7 +220,7 @@ div.navbar ul li {
   margin-top: 20;
 }
 .sidebar img {
-  width: 180px;
+  width: 100px;
   height: 80px;
   float: left;
   padding-right: 10px;
@@ -234,7 +234,8 @@ footer {
   background-color: var(--title);
   color: #fff;
   padding-top: 40px;
-  position: relative;
+  display: block;
+  /* position: relative; */
 }
 .footer-content {
   display: flex;
@@ -376,11 +377,11 @@ input.custom-input-group:focus {
     display: block;
   }
   .sidebar {
-    display: block;
-    left: 0%;
     width: 100%;
   }
-
+  .div {
+    display: block;
+  }
   /* Hero */
 
   .bg-hero img {

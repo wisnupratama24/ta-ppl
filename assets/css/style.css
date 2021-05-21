@@ -324,7 +324,14 @@ input.custom-input-group:focus {
   font-weight: 500;
   color: var(--gray-400);
 }
-
+/* Kotak */
+.kotak {
+  border-style: outset;
+  margin: 30px;
+  padding: 20px;
+  background-color: #fff;
+}
+/* end kotak */
 /* End Login */
 
 /* End Halaman Home */

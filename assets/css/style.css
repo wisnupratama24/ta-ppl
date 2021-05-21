@@ -224,7 +224,6 @@ div.navbar ul li {
 
 .daftar-lowongan {
   width: 750px;
-  float: left;
   max-width: 100%;
 }
 .sidebar img {
@@ -370,6 +369,10 @@ input.custom-input-group:focus {
     flex-direction: column;
   }
 
+  .custom-input-group {
+    display: none;
+  }
+
   div.navbar ul {
     flex-direction: column;
     align-items: flex-start;
@@ -385,13 +388,9 @@ input.custom-input-group:focus {
     display: block;
   }
   .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
+    display: none;
   }
-  .div {
-    display: block;
-  }
+
   /* Hero */
 
   .bg-hero img {
@@ -440,5 +439,20 @@ input.custom-input-group:focus {
   .daftar-lowongan {
     width: 100%;
     height: auto;
+  }
+  .lowongan-right {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 991px) {
+  .sidebar {
+    display: none;
+  }
+  .custom-input-group {
+    display: none;
+  }
+  .lowongan-right {
+    display: none;
   }
 }

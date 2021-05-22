@@ -122,6 +122,10 @@ div.navbar ul li {
   border-radius: 0.5rem;
 }
 
+.navbar .button-right {
+  text-decoration: none;
+}
+
 /* Hero */
 .bg-hero img {
   height: 300px;

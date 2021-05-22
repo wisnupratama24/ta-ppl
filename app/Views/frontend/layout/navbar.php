@@ -25,8 +25,8 @@
             </ul>
 
             <div class="button-right">
-                <button class="btn btn-custom-primary btn-hover-primary">Login</button>
-                <button class="btn btn-register">Register</button>
+                <a href="<?= base_url('login') ?>" class="btn text-white btn-custom-primary btn-hover-primary">Login</a>
+                <a href="<?= base_url('register') ?>" class="btn btn-register text-dark">Register</a>
             </div>
         </div>
     </div>

@@ -349,6 +349,14 @@ input.custom-input-group:focus {
 /* Halaman Lowongan */
 #lowongan-kerja .lowongan-right {
   flex: 1;
+  position: fixed;
+  right: 10%;
+  width: 30%;
+  background-color: #fffaf6;
+}
+
+#lowongan-kerja .berita-right {
+  flex: 1;
   /* position: fixed; */
   right: 10%;
   width: 30%;
@@ -444,8 +452,17 @@ input.custom-input-group:focus {
     padding-right: 1.5rem;
   }
 
+  #lowongan-kerja .berita-right {
+    position: absolute;
+    top: 15%;
+    background-color: transparent;
+    left: 0;
+    width: 100%;
+    padding-right: 1.5rem;
+  }
+
   #lowongan-kerja .daftar-lowongan {
-    padding-top: 10%;
+    padding-top: 40%;
   }
 
   #lowongan-kerja .wrap-lowongan {
@@ -457,7 +474,7 @@ input.custom-input-group:focus {
     width: 100%;
     height: auto;
   }
-  .lowongan-right {
+  .berita-right {
     display: none;
   }
 }
@@ -466,10 +483,7 @@ input.custom-input-group:focus {
   .sidebar {
     display: none;
   }
-  .custom-input-group {
-    display: none;
-  }
-  .lowongan-right {
+  .berita-right {
     display: none;
   }
 }

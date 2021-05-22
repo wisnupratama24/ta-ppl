@@ -45,6 +45,9 @@ defined('DECADE') || define('DECADE', 315360000);
 
 
 defined('appName') || define('appName', 'Semarang');
+defined('subjectEmailAktivasi') || define('subjectEmailAktivasi', 'Segera Aktifkan Akun Kamu');
+
+
 
 
 /*

@@ -9,7 +9,7 @@ class UserModel extends Model
     protected $table = "user";
     protected $primaryKey = "id";
     protected $useAutoIncrement = true;
-    protected $allowedFields = ['nama', 'password', 'email', 'tlp', 'role_id', 'reset_password', 'created_at'];
+    protected $allowedFields = ['nama', 'password', 'email', 'tlp', 'role_id', 'reset_password', 'is_active', 'created_at'];
 
     protected $db;
 

@@ -32,6 +32,67 @@ class Auth extends BaseController
         return view('frontend/auth/login', $data);
     }
 
+    public function aktivasi($hash)
+    {
+
+        $hasUser = $this->userModel->getCountActivation($hash);
+        if ($hasUser['total'] <= 0) {
+            return redirect()->to('/register');
+        } else {
+            $data = [
+                'title' => appName . ' | Aktivasi Akun',
+                'hash' => $hash,
+                'nama' => $hasUser['nama'],
+                'is_active' => $hasUser['is_active']
+            ];
+            return view('frontend/auth/aktivasi', $data);
+        }
+    }
+
+
+    public function process_aktivasi()
+    {
+
+        $hash = $this->request->getPost('hash');
+
+        $hasUser = $this->userModel->getCountActivation($hash);
+        if ($hasUser['total'] <= 0) {
+            $output = [
+                'state' => false,
+                'msg' => 'Aktivasi gagal, link tidak valid.',
+                'token' => csrf_hash(),
+            ];
+
+            return $this->response->setJSON($output);
+        } else {
+            $dataUser = [
+                'is_active' => 1
+            ];
+            $updateIsActive = $this->userModel->update($hasUser['id'], $dataUser);
+
+            if ($updateIsActive) {
+                $output = [
+                    'state' => true,
+                    'msg' => 'Aktivasi berhasil, silahkan login.',
+                    'token' => csrf_hash(),
+
+                ];
+
+                return $this->response->setJSON($output);
+            } else {
+                $output = [
+                    'state' => false,
+                    'msg' => 'Aktivasi gagal, coba lagi nanti.',
+                    'token' => csrf_hash(),
+                ];
+
+                return $this->response->setJSON($output);
+            }
+        }
+    }
+
+
+
     public function process_register()
     {
         $nama = $this->request->getPost('nama');
@@ -72,18 +133,20 @@ class Auth extends BaseController
             return $this->response->setJSON($output);
         }
 
+        $hashPassword = password_hash($password, PASSWORD_BCRYPT);
+
         $dataUser = [
             'nama' => $nama,
             'email' => $email,
             'tlp' => $tlp,
-            'password' => password_hash($password, PASSWORD_BCRYPT),
+            'password' => $hashPassword,
             'role_id' => 'user',
             'is_active' => 0,
             'created_at' => date('Y-m-d H:i:s'),
         ];
 
 
-        $hash = md5(md5($nama . '-' . $email . '-' . $password));
+        $hash = md5(md5($nama . '-' . $email . '-' . $hashPassword));
         $link = base_url('register/aktivasi/') . '/' . $hash;
         $message = $this->emailLibrary->message_aktivasi($nama, $link);
         $sendMail = $this->emailLibrary->send_email($email, subjectEmailAktivasi, $message);

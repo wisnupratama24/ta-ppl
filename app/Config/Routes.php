@@ -37,6 +37,8 @@ $routes->get('/login', 'Auth::login');
 
 $routes->group('register', function ($routes) {
 	$routes->get('/', 'Auth::register');
+	$routes->get('aktivasi/(:any)', 'Auth::aktivasi/$1');
+	$routes->post('aktivasi', 'Auth::process_aktivasi');
 	$routes->post('process', 'Auth::process_register');
 });
 

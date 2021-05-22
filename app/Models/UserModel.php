@@ -18,4 +18,12 @@ class UserModel extends Model
         parent::__construct();
         $this->db = \Config\Database::connect();
     }
+
+
+    public function getCountActivation($hash)
+    {
+        $query = $this->db->query("SELECT COUNT(*) as total, id, nama, is_active FROM user WHERE md5(md5(CONCAT(nama, '-', email, '-', password))) = '$hash'")->getRowArray();
+
+        return $query;
+    }
 }

@@ -58,7 +58,13 @@ $routes->group('loker', function ($routes) {
 	$routes->get('/', 'Loker::index');
 });
 
+$routes->group('marketplace', function ($routes) {
+	$routes->get('/', 'Marketplace::index');
+});
 
+$routes->group('news', function ($routes) {
+	$routes->get('/', 'News::index');
+});
 
 $routes->group('admin', function ($routes) {
 	$routes->get('dashboard', 'Dashboard::index');

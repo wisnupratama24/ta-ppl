@@ -54,6 +54,11 @@ $routes->group('register', function ($routes) {
 });
 
 
+$routes->group('loker', function ($routes) {
+	$routes->get('/', 'Loker::index');
+});
+
+
 
 $routes->group('admin', function ($routes) {
 	$routes->get('dashboard', 'Dashboard::index');

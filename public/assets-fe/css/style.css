@@ -96,6 +96,10 @@ div.navbar ul li {
   color: var(--secondary);
 }
 
+.navbar ul li a.active {
+  color: var(--secondary);
+}
+
 .navbar .menus {
   width: 75%;
   display: flex;

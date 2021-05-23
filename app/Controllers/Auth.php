@@ -26,6 +26,8 @@ class Auth extends BaseController
 
     public function login()
     {
+
+
         $data = [
             'title' => appName . ' | Login'
         ];

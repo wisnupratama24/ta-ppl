@@ -2,6 +2,7 @@
 
 namespace Config;
 
+use App\Filters\IsLoggedIn;
 use CodeIgniter\Config\BaseConfig;
 use CodeIgniter\Filters\CSRF;
 use CodeIgniter\Filters\DebugToolbar;
@@ -19,6 +20,7 @@ class Filters extends BaseConfig
 		'csrf'     => CSRF::class,
 		'toolbar'  => DebugToolbar::class,
 		'honeypot' => Honeypot::class,
+		'isLoggedIn' => IsLoggedIn::class
 	];
 
 	/**
@@ -31,6 +33,7 @@ class Filters extends BaseConfig
 		'before' => [
 			// 'honeypot',
 			'csrf',
+
 		],
 		'after'  => [
 			'toolbar',
@@ -58,5 +61,16 @@ class Filters extends BaseConfig
 	 *
 	 * @var array
 	 */
-	public $filters = [];
+	public $filters = [
+		'isLoggedIn' => [
+			'before' => [
+				'/login',
+				'login/*',
+				'/register',
+				'register/*',
+				'/password',
+				'password/*'
+			]
+		]
+	];
 }

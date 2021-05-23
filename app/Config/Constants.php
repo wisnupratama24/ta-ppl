@@ -46,6 +46,12 @@ defined('DECADE') || define('DECADE', 315360000);
 
 defined('appName') || define('appName', 'Semarang');
 defined('subjectEmailAktivasi') || define('subjectEmailAktivasi', 'Segera Aktifkan Akun Kamu');
+defined('subjectResetPassword') || define('subjectResetPassword', 'Reset Password di Semarangku.');
+
+defined('emailUser') || define('emailUser', getenv('EMAIL_USER'));
+defined('emailPass') || define('emailPass', getenv('EMAIL_PASS'));
+
+
 
 
 

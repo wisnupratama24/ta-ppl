@@ -13,8 +13,8 @@
 
 <main class="main d-flex align-items-center mt-md-5 mt-3">
     <section class="login container p-4">
-        <div class="row">
-            <div class="col-md-6">
+        <div class="content">
+            <div class="col-md-6 ">
                 <h6>Berita Terbaru</h6>
                 <div class="news-login mt-4">
                     <div class="d-flex">
@@ -63,27 +63,96 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+
+            <div class="col-md-6 mb-md-0 mb-5">
                 <h2 class="mb-5">Log in</h2>
-                <form action="" class="mt-5">
+                <div id="alert">
+                </div>
+                <form action="<?= base_url('login/process') ?>" method="POST" class="mt-5" id="form-login">
+                    <?php csrf_field() ?>
+                    <input type="hidden" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>" class="csrf" />
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        <input type="email" autocomplete="off" placeholder="User@mail.com" class="custom-input" name="email" id="email" />
+                        <input type="email" required autocomplete="off" placeholder="User@mail.com" class="custom-input" name="email" id="email" />
                     </div>
 
                     <div class="form-group mt-3">
                         <label for="password">Password</label>
-                        <input type="password" placeholder="******" class="custom-input" name="password" id="password" />
+                        <input type="password" required placeholder="******" class="custom-input" name="password" id="password" />
                     </div>
 
                     <div>
-                        <button style="padding: 0.75rem 0" class="btn mt-4 btn-custom-primary btn-block">Log me in</button>
-                        <p class="privacy-content">By proceeding, You understand and agree to Our use of the information that You submit in accordance with the provisions of the Privacy Policy.</p>
+                        <button type="submit" id="btn-login" style="padding: 0.75rem 0" class="btn mt-4 btn-custom-primary btn-block">Log me in</button>
+                        <p class="privacy-content">Dengan melanjutkan, Anda memahami dan menyetujui penggunaan Kami atas informasi yang Anda sampaikan sesuai dengan ketentuan Kebijakan Privasi.</p>
+                    </div>
+
+                    <div class="mt-5 text-center d-flex fs-12 justify-content-center">
+                        <p class="text-secondary "> Lupa kata sandi? </p> <a href="<?= base_url('password/forgot') ?>" class="ml-1">Klik Disini</a>
                     </div>
                 </form>
             </div>
         </div>
     </section>
 </main>
+
+<script>
+    var form = document.querySelector("#form-login");
+    $('#form-login').submit(function(e) {
+        disabled_button('btn-login');
+        $('#alert').html('');
+        e.preventDefault();
+        $.ajax({
+            url: '<?= base_url('login/process') ?>',
+            method: "POST",
+            data: new FormData(form),
+            contentType: false,
+            cache: false,
+            processData: false,
+            dataType: "json",
+            beforeSend: function() {
+                disabled_button('btn-login');
+            },
+            complete: function() {
+                $('#btn-login').removeAttr('disabled');
+                $('#btn-login').html("Log me in")
+                $('#btn-login').removeClass('btn-secondary');
+                $('#btn-login').addClass('btn-custom-primary');
+            },
+            success: function(response) {
+                $('.csrf').val(response.token);
+                if (response.state == false) {
+                    var responseError = response.error;
+
+                    if (response.msg != undefined) {
+
+                        $('html, body').animate({
+                            scrollTop: $("html, body").offset().top
+                        }, 1000);
+                        window.scrollTo(0, 100);
+
+                        var htmlFailed = `
+                        <div class="alert alert-danger" role="alert">
+                           ${response.msg}
+                        </div>`;
+
+                        $('#alert').html(htmlFailed);
+                    }
+                } else {
+                    window.location.href = '/';
+                }
+
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                error_handler("<?= base_url('register') ?>", xhr, thrownError);
+            }
+        })
+
+    });
+
+    function invalidFeedback(key, msg) {
+        var htmlFeedback = `<div class="invalid-feedback ${key}" style='margin-top:-20px;'> ${msg}</div>`
+        return htmlFeedback;
+    }
+</script>
 
 <?= $this->include('frontend/auth/footer') ?>

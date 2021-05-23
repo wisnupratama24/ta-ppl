@@ -126,6 +126,14 @@ div.navbar ul li {
   text-decoration: none;
 }
 
+/* Login */
+
+.login .content {
+  display: flex;
+  flex-direction: row;
+}
+/* End Login */
+
 /* Hero */
 .bg-hero img {
   height: 300px;
@@ -426,6 +434,13 @@ input.custom-input-group:focus {
   }
 
   /* End Hero */
+
+  /* Login */
+  .login .content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  /* End Login */
 
   /* Marketplace */
 

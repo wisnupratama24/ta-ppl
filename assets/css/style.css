@@ -236,6 +236,10 @@ div.navbar ul li {
   width: 750px;
   max-width: 100%;
 }
+.daftar-berita {
+  width: 750px;
+  max-width: 100%;
+}
 .sidebar img {
   width: 100px;
   height: 80px;
@@ -341,6 +345,12 @@ input.custom-input-group:focus {
   padding: 20px;
   background-color: #fff;
 }
+
+.form-control-lg {
+  height: 100px;
+  font-size: 15px;
+  @include border-radius($input-border-radius-lg);
+}
 /* end kotak */
 /* End Login */
 
@@ -357,7 +367,6 @@ input.custom-input-group:focus {
 
 #lowongan-kerja .berita-right {
   flex: 1;
-  /* position: fixed; */
   right: 10%;
   width: 30%;
   background-color: #fffaf6;
@@ -464,6 +473,9 @@ input.custom-input-group:focus {
   #lowongan-kerja .daftar-lowongan {
     padding-top: 40%;
   }
+  #lowongan-kerja .daftar-berita {
+    padding-top: 0%;
+  }
 
   #lowongan-kerja .wrap-lowongan {
     width: 100%;
@@ -471,6 +483,10 @@ input.custom-input-group:focus {
     position: relative;
   }
   .daftar-lowongan {
+    width: 100%;
+    height: auto;
+  }
+  .daftar-berita {
     width: 100%;
     height: auto;
   }

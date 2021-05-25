@@ -62,7 +62,7 @@
                 <div class="form-group row">
                   <label for="deskripsi" class="col-sm-2 col-form-label pl-5">Deskripsi</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="deskripsi" placeholder="Deskripsi Produk" />
+                    <textarea class="form-control" rows="5" placeholder="Deskripsi"></textarea>
                   </div>
                 </div>
                 <div class="form-group row">
@@ -105,61 +105,29 @@
               </form>
             </div>
             <div class="kotak">
-              <h6 class="font-weight-bold mt-3 d-flex align-items-start px-3 pt-3 pb-5" style="font-size: 22px">Detail Produk</h6>
+              <h6 class="font-weight-bold mt-3 d-flex align-items-start px-3 pt-3 pb-5" style="font-size: 22px">Kisaran Harga</h6>
               <form>
                 <div class="form-group row">
-                  <label for="Produk" class="col-sm-2 col-form-label pl-5">Nama Produk</label>
+                  <label for="Merk" class="col-sm-2 col-form-label pl-5">Harga Minimal</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="Produk" placeholder="Nama Produk" />
+                    <input type="text" class="form-control" id="Harga Min" placeholder="Mohon masukan angkanya" />
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="lokasi" class="col-sm-2 col-form-label pl-5">Lokasi</label>
+                  <label for="Stock" class="col-sm-2 col-form-label pl-5">Harga Maksimal</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="lokasi" placeholder="Lokasi Tempat Produk" />
+                    <input type="text" class="form-control" id="Harga Max" placeholder="Mohon masukan angkanya" />
                   </div>
                 </div>
+              </form>
+            </div>
+            <div class="kotak">
+              <h6 class="font-weight-bold mt-3 d-flex align-items-start px-3 pt-3 pb-5" style="font-size: 22px">Foto</h6>
+              <form>
                 <div class="form-group row">
-                  <label for="deskripsi" class="col-sm-2 col-form-label pl-5">Deskripsi</label>
+                  <label for="foto" class="col-sm-2 col-form-label pl-5">Unggah Foto</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="deskripsi" placeholder="Deskripsi Produk" />
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="kategori" class="col-sm-2 col-form-label pl-5">Kategori</label>
-                  <div class="col-sm-10">
-                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-                      <option selected>Makanan dan Minuman</option>
-                      <option value="1">Handphone, Komputer dan aksesoris</option>
-                      <option value="2">Fashion Wanita & Pria</option>
-                      <option value="3">Fashion Bayi & Anak</option>
-                      <option value="4">Alat Sekolah & Olahraga</option>
-                      <option value="5">Jam Tangan</option>
-                      <option value="6">Barang Elektronik & Musik</option>
-                      <option value="7">Perawatan & Kecantikan</option>
-                      <option value="8">Perlengkapan Rumah & Otomotif</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="Merk" class="col-sm-2 col-form-label pl-5">Merk</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="Merk" placeholder="Opsional" />
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="kondisi" class="col-sm-2 col-form-label pl-5">Kondisi</label>
-                  <div class="col-sm-10">
-                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-                      <option selected>Baru</option>
-                      <option value="1">Bekas</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="Stock" class="col-sm-2 col-form-label pl-5">Stock</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="Merk" placeholder="Mohon masukan angkanya" />
+                    <input type="file" class="form-control form-control-lg" id="Image" placeholder="hi" />
                   </div>
                 </div>
               </form>
@@ -168,7 +136,44 @@
         </div>
       </section>
     </main>
-
+    <div class="owl-carousel container d-flex justify-content-between mt-5">
+      <div class="bg-wisata">
+        <div>
+          <img src="./assets/img/wisata-1.png" alt="Wisata 1" />
+        </div>
+        <div class="desc">
+          <h5>Tugu Muda</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quam dolorem sapiente aliquam,</p>
+        </div>
+      </div>
+      <div class="bg-wisata">
+        <div>
+          <img src="./assets/img/wisata-1.png" alt="Wisata 1" />
+        </div>
+        <div class="desc">
+          <h5>Tugu Muda</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quam dolorem sapiente aliquam,</p>
+        </div>
+      </div>
+      <div class="bg-wisata">
+        <div>
+          <img src="./assets/img/wisata-1.png" alt="Wisata 1" />
+        </div>
+        <div class="desc">
+          <h5>Tugu Muda</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quam dolorem sapiente aliquam,</p>
+        </div>
+      </div>
+      <div class="bg-wisata">
+        <div>
+          <img src="./assets/img/wisata-1.png" alt="Wisata 1" />
+        </div>
+        <div class="desc">
+          <h5>Tugu Muda</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quam dolorem sapiente aliquam,</p>
+        </div>
+      </div>
+    </div>
     <footer>
       <div class="footer-content">
         <h3>Follow us on social media</h3>

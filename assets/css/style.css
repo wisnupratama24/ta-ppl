@@ -72,6 +72,9 @@
 .btn-hover-primary:hover {
   background-color: #f17c06;
 }
+.btn-hover-primaryy:hover {
+  background-color: #1e3a8a;
+}
 
 /* End Custom Class */
 
@@ -144,7 +147,7 @@ div.navbar ul li {
   border-radius: 1rem;
 }
 .figure img {
-  height: 200px;
+  height: 300px;
   border-radius: 1rem;
   image-rendering: pixelated;
   object-fit: cover;
@@ -155,10 +158,37 @@ div.navbar ul li {
   line-height: 40px;
   color: var(--title);
 }
+.column {
+  margin-left: 20px;
+  margin-top: 50px;
+  width: 180px;
+  float: left;
+}
+.inputs {
+  margin-top: 50px;
+  float: left;
+}
+.inputs h5 {
+  font-weight: 60;
+  color: #415d8d;
+  line-height: 1.275rem;
+  margin-bottom: 24px;
+}
 
 #hero .title p {
   font-weight: 300;
   color: #9ca3af;
+  line-height: 1.275rem;
+}
+#hero .title h4 {
+  font-weight: 80;
+  color: #284d8d;
+  line-height: 1.275rem;
+  margin-bottom: 1em;
+}
+#hero .title h2 {
+  font-weight: 500;
+  color: #dd441d;
   line-height: 1.275rem;
 }
 
@@ -231,9 +261,14 @@ div.navbar ul li {
   color: black;
 }
 
+.dproduk p {
+  font-weight: 300;
+  color: #9ca3af;
+  line-height: 1.275rem;
+}
 .img-publish {
-  width: 100px;
-  height: 100px;
+  width: 20px;
+  height: 50px;
   image-rendering: pixelated;
 }
 

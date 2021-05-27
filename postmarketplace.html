@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/vendor/owl-carousel/owl.carousel.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	
+			<style> 
+			input[type=submit], input[type=reset] {
+			background-color: #fb9128;
+			border: none;
+			color: white;
+			padding: 16px 32px;
+			text-decoration: none;
+			cursor: pointer;
+			}
+			</style>
     <title>Semarang</title>
   </head>
   <body>
@@ -43,7 +54,7 @@
             <div class="wrap-lowongan d-flex align-items-start px-3" style="border-bottom: 2px solid #a7b5ce">
               <h6 class="font-weight-bold" style="font-size: 30px">Jual Barang</h6>
             </div>
-            <h6 class="font-weight-bold mt-5 d-flex align-items-start px-3 pt-3 pb-5" style="font-size: 30px">Jual Barang</h6>
+            <h6 class="font-weight-bold mt-5 d-flex align-items-start px-3 pt-3 pb-5" style="font-size: 30px">Tambah Produk</h6>
             <div class="kotak">
               <h6 class="font-weight-bold mt-3 d-flex align-items-start px-3 pt-3 pb-5" style="font-size: 22px">Detail Produk</h6>
               <form>
@@ -62,7 +73,7 @@
                 <div class="form-group row">
                   <label for="deskripsi" class="col-sm-2 col-form-label pl-5">Deskripsi</label>
                   <div class="col-sm-10">
-                    <textarea class="form-control" rows="5" placeholder="Deskripsi"></textarea>
+                    <input type="text" class="form-control" id="deskripsi" placeholder="Deskripsi Produk" />
                   </div>
                 </div>
                 <div class="form-group row">
@@ -108,34 +119,37 @@
               <h6 class="font-weight-bold mt-3 d-flex align-items-start px-3 pt-3 pb-5" style="font-size: 22px">Kisaran Harga</h6>
               <form>
                 <div class="form-group row">
-                  <label for="Merk" class="col-sm-2 col-form-label pl-5">Harga Minimal</label>
+                  <label for="Produk" class="col-sm-2 col-form-label pl-5">Harga Minimal</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="Harga Min" placeholder="Mohon masukan angkanya" />
+                    <input type="text" class="form-control" id="Produk" placeholder="Mohon masukkan angka" />
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="Stock" class="col-sm-2 col-form-label pl-5">Harga Maksimal</label>
+                  <label for="lokasi" class="col-sm-2 col-form-label pl-5">Harga Maksimal</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="Harga Max" placeholder="Mohon masukan angkanya" />
+                    <input type="text" class="form-control" id="lokasi" placeholder="Mohon masukkan angka" />
                   </div>
-                </div>
-              </form>
-            </div>
-            <div class="kotak">
-              <h6 class="font-weight-bold mt-3 d-flex align-items-start px-3 pt-3 pb-5" style="font-size: 22px">Foto</h6>
-              <form>
-                <div class="form-group row">
-                  <label for="foto" class="col-sm-2 col-form-label pl-5">Unggah Foto</label>
-                  <div class="col-sm-10">
-                    <input type="file" class="form-control form-control-lg" id="Image" placeholder="hi" />
-                  </div>
-                </div>
               </form>
             </div>
           </div>
-        </div>
+		  <div class="kotak">
+              <h6 class="font-weight-bold mt-3 d-flex align-items-start px-3 pt-3 pb-5" style="font-size: 22px">Foto</h6>
+              <form>
+                <div class="form-group row">
+                  <label for="Produk" class="col-sm-2 col-form-label pl-5">Unggah Foto</label>
+                  <div class="col-sm-10">
+					<input type="file" value="upload gambar"/>
+                  </div>
+                </div>
+              </form>
+			  </div>
+            <div class="button-center">
+            <button class="btn btn-custom-primary btn-hover-primary">Submit</button>
+            <button class="btn btn-custom-primary btn-hover-primary">Reset</button>
+          </div>
       </section>
     </main>
+
     <footer>
       <div class="footer-content">
         <h3>Follow us on social media</h3>

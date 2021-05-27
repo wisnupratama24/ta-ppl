@@ -143,6 +143,12 @@ div.navbar ul li {
   height: 300px;
   border-radius: 1rem;
 }
+.figure img {
+  height: 200px;
+  border-radius: 1rem;
+  image-rendering: pixelated;
+  object-fit: cover;
+}
 
 #hero .title h3 {
   font-weight: 600;
@@ -205,6 +211,30 @@ div.navbar ul li {
   /* background-color: #f59e0b; */
   background-color: var(--title);
   height: 300px;
+}
+
+.owl-prev {
+  left: -30px;
+}
+
+.owl-next {
+  right: -30px;
+}
+.owl-prev,
+.owl-next {
+  position: absolute;
+  top: -30px;
+}
+.owl-prev span,
+.owl-next span {
+  font-size: 80px;
+  color: black;
+}
+
+.img-publish {
+  width: 100px;
+  height: 100px;
+  image-rendering: pixelated;
 }
 
 /* End Marketplace */
@@ -309,7 +339,9 @@ footer {
 /* penggunaan media query pada default tablet layout */
 /* @media only screen and (min-width: 768px) and (max-width: 991px) {
 } */
-
+.col-md-6 {
+  margin-top: 100px;
+}
 .custom-input-group {
   border: none;
   background-color: transparent;
@@ -367,6 +399,7 @@ input.custom-input-group:focus {
   font-size: 15px;
 }
 /* end kotak */
+
 /* End Login */
 
 /* End Halaman Home */
@@ -441,6 +474,11 @@ input.custom-input-group:focus {
   .bg-hero img {
     height: auto;
     border-radius: 0.5rem;
+  }
+  .figure img {
+    height: auto;
+    border-radius: 0.5rem;
+    image-rendering: pixelated;
   }
 
   #hero .title h3 {

@@ -374,9 +374,7 @@ footer {
 /* penggunaan media query pada default tablet layout */
 /* @media only screen and (min-width: 768px) and (max-width: 991px) {
 } */
-.col-md-6 {
-  margin-top: 100px;
-}
+
 .custom-input-group {
   border: none;
   background-color: transparent;

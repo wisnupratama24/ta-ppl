@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/vendor/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Semarang</title>
+  </head>
+  <body>
+    <nav class="fixed-top">
+      <div class="navbar container">
+        <div>
+          <h6 class="font-weight-bold" style="font-size: 22px">Sem<span style="color: #fb9128">arangku.</span></h6>
+        </div>
+        <div class="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="menus navbar-active">
+          <ul>
+            <ul>
+              <li>
+                <a href=""> Home </a>
+              </li>
+              <li>
+                <a href=""> Wisata </a>
+              </li>
+              <li>
+                <a href=""> Loker</a>
+              </li>
+              <li>
+                <a href=""> Marketplace </a>
+              </li>
+              <li>
+                <a href=""> Berita </a>
+              </li>
+            </ul>
+          </ul>
+
+          <div class="button-right">
+            <button class="btn btn-custom-primary btn-hover-primary">Login</button>
+            <button class="btn btn-register">Register</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main" style="margin-top: 16vh">
+      <section id="wisata">
+        <div class="title">
+          <h3 class="text-center font-weight-bold">5 Rekomendasi Tempat Wisata Semarang</h3>
+        </div>
+
+        <div class="owl-carousel container d-flex justify-content-between mt-5">
+          <div class="bg-wisata">
+            <div>
+              <img src="./assets/img/wisata-1.png" alt="Wisata 1" />
+            </div>
+            <div class="desc">
+              <h5>Tugu Muda</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quam dolorem sapiente aliquam,</p>
+            </div>
+          </div>
+          <div class="bg-wisata">
+            <div>
+              <img src="./assets/img/wisata-1.png" alt="Wisata 1" />
+            </div>
+            <div class="desc">
+              <h5>Tugu Muda</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quam dolorem sapiente aliquam,</p>
+            </div>
+          </div>
+          <div class="bg-wisata">
+            <div>
+              <img src="./assets/img/wisata-1.png" alt="Wisata 1" />
+            </div>
+            <div class="desc">
+              <h5>Tugu Muda</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quam dolorem sapiente aliquam,</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <h3>Follow us on social media</h3>
+        <ul class="socials">
+          <li>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+          </li>
+          <li></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="./assets/jquery-3.6.0.min.js"></script>
+    <script src="./assets/vendor/owl-carousel/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="./assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".hamburger").click(function () {
+          console.log("ok");
+          $(".menus").toggleClass("navbar-active");
+        });
+      });
+      $(".owl-carousel").owlCarousel({
+        margin: 10,
+        autoplay: true,
+        autoplayHoverPause: true,
+        loop: true,
+        responsive: {
+          0: {
+            items: 1,
+            nav: false,
+          },
+          300: {
+            items: 1,
+            nav: false,
+          },
+          1000: {
+            items: 3,
+            nav: false,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

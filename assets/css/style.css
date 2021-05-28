@@ -431,6 +431,16 @@ input.custom-input-group:focus {
   height: 100px;
   font-size: 15px;
 }
+.lingkaran {
+  width: 100px;
+  height: 100px;
+  background: #dac52c;
+  border-radius: 100%;
+  margin-bottom: 1em;
+  text-align: center;
+  line-height: 130px;
+}
+
 /* end kotak */
 
 /* End Login */

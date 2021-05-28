@@ -46,13 +46,16 @@
         </div>
       </div>
     </nav>
-
-    <main class="main" style="margin-top: 16vh">
+    
+     <main class="main" style="margin-top: 16vh">
       <section class="container" id="lowongan-kerja" style="margin-top: 8rem">
         <div class="d-md-flex d-block justify-content-between">
           <div class="daftar-lowongan d-block" style="flex: 2">
             <div class="wrap-lowongan d-flex align-items-start px-3" style="border-bottom: 2px solid #a7b5ce">
-              <h6 class="font-weight-bold" style="font-size: 30px">Jual Barang</h6>
+              <div class="lingkaran" >
+                <i class="fa fa-shopping-cart fa-4x"></i>
+              </div>
+              <h6 class="font-weight-bold mt-4 ml-4" style="font-size: 30px">Jual Barang</h6>
             </div>
             <h6 class="font-weight-bold mt-5 d-flex align-items-start px-3 pt-3 pb-5" style="font-size: 30px">Tambah Produk</h6>
             <div class="kotak">
@@ -70,10 +73,11 @@
                     <input type="text" class="form-control" id="lokasi" placeholder="Lokasi Tempat Produk" />
                   </div>
                 </div>
+            
                 <div class="form-group row">
                   <label for="deskripsi" class="col-sm-2 col-form-label pl-5">Deskripsi</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="deskripsi" placeholder="Deskripsi Produk" />
+                    <textarea class="form-control" rows="5" placeholder="Deskripsi"></textarea>
                   </div>
                 </div>
                 <div class="form-group row">
@@ -132,21 +136,21 @@
               </form>
             </div>
           </div>
-		  <div class="kotak">
+		     <div class="kotak">
               <h6 class="font-weight-bold mt-3 d-flex align-items-start px-3 pt-3 pb-5" style="font-size: 22px">Foto</h6>
               <form>
                 <div class="form-group row">
-                  <label for="Produk" class="col-sm-2 col-form-label pl-5">Unggah Foto</label>
+                  <label for="foto" class="col-sm-2 col-form-label pl-5">Unggah Foto</label>
                   <div class="col-sm-10">
-					<input type="file" value="upload gambar"/>
+                    <input type="file" class="form-control form-control-lg " style=" align-items: center; justify-content: center;" id="Image" placeholder="hi" />
                   </div>
                 </div>
               </form>
 			  </div>
-            <div class="button-center">
-            <button class="btn btn-custom-primary btn-hover-primary">Submit</button>
-            <button class="btn btn-custom-primary btn-hover-primary">Reset</button>
-          </div>
+        <center>
+          <a href="#" class="btn btn-warning btn-md" type="submit">Submit</a> 
+          <a href="#" class="btn btn-warning btn-md" type="reset">Reset</a>
+        </center>
       </section>
     </main>
 
@@ -170,7 +174,7 @@
         </ul>
       </div>
     </footer>
-
+<div class="clas"></div>
     <script src="./assets/jquery-3.6.0.min.js"></script>
     <script src="./assets/vendor/owl-carousel/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

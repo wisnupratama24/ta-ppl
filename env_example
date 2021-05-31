@@ -124,5 +124,5 @@
 
 
 EMAIL_USER = ''
-EMAIL_PASS = 'Dewisavitri:*1'
+EMAIL_PASS = ''
 

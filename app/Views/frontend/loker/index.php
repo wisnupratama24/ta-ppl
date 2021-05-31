@@ -69,7 +69,7 @@
                 <div>
                     <div class="custom-input d-flex align-items-center">
                         <span>
-                            <i class="fas fa-search"></i>
+                            <i class="fa fa-search"></i>
                         </span>
                         <input type="text" class="custom-input-group pl-3" placeholder="Cari Lowongan" />
                     </div>

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
   --primary: #fffaf6;
@@ -61,7 +61,7 @@
 
 body {
   background-color: var(--primary);
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 nav {
   background-color: var(--primary);
@@ -96,11 +96,11 @@ div.navbar ul li {
   color: var(--secondary);
 }
 
-.navbar ul li a.active {
+<<<<<<< HEAD:assets/css/style.css ======= .navbar ul li a.active {
   color: var(--secondary);
 }
 
-.navbar .menus {
+>>>>>>>741f19f0a486cebb1b71cbf91ec29d2bd71ab1b1:public/assets-fe/css/style.css .navbar .menus {
   width: 75%;
   display: flex;
   justify-content: space-between;
@@ -365,6 +365,14 @@ input.custom-input-group:focus {
 /* Halaman Lowongan */
 #lowongan-kerja .lowongan-right {
   flex: 1;
+  position: fixed;
+  right: 10%;
+  width: 30%;
+  background-color: #fffaf6;
+}
+
+#lowongan-kerja .berita-right {
+  flex: 1;
   /* position: fixed; */
   right: 10%;
   width: 30%;
@@ -400,10 +408,6 @@ input.custom-input-group:focus {
     justify-content: start;
     align-items: flex-start;
     flex-direction: column;
-  }
-
-  .custom-input-group {
-    display: none;
   }
 
   div.navbar ul {
@@ -467,8 +471,17 @@ input.custom-input-group:focus {
     padding-right: 1.5rem;
   }
 
+  #lowongan-kerja .berita-right {
+    position: absolute;
+    top: 15%;
+    background-color: transparent;
+    left: 0;
+    width: 100%;
+    padding-right: 1.5rem;
+  }
+
   #lowongan-kerja .daftar-lowongan {
-    padding-top: 10%;
+    padding-top: 40%;
   }
 
   #lowongan-kerja .wrap-lowongan {
@@ -480,19 +493,10 @@ input.custom-input-group:focus {
     width: 100%;
     height: auto;
   }
-  .lowongan-right {
-    display: none;
-  }
 }
 
 @media only screen and (min-width: 280px) and (max-width: 991px) {
   .sidebar {
-    display: none;
-  }
-  .custom-input-group {
-    display: none;
-  }
-  .lowongan-right {
     display: none;
   }
 }

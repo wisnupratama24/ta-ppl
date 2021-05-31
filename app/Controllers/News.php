@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-class Marketplace extends BaseController
+class News extends BaseController
 {
     protected $data;
 

@@ -20,7 +20,7 @@
                     <a href="<?= base_url('/marketplace') ?>"> Marketplace </a>
                 </li>
                 <li>
-                    <a href="<?= base_url('/berita') ?>"> Berita </a>
+                    <a href="<?= base_url('/news') ?>"> Berita </a>
                 </li>
             </ul>
 

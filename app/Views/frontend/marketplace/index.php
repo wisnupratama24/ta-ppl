@@ -11,48 +11,49 @@
               <article>
                 <img src="<?= base_url()?>/assets-fe/img/bg-hero.png" alt="" />
                 <div class="text">
-                  <h3>Rp.10.000,.</h3>
-                  <p>Nama Produk</p>                  <h6>Semarang, jawa tengah</h6>
+                 <h3>Rp.10.000,.</h3>
+                  <h6>Nama Produk</h6>
+                  <p>Semarang, jawa tengah</p>
                 </div>
               </article>
               <article>
-                <img src="<?= base_url()?>/assets-fe/img/bg-hero.png" alt="" />
+                <img src="<?= base_url()?>/assets-fe/img/wisata-2.png" alt="" />
                 <div class="text">
                   <h3>Rp.10.000,.</h3>
-                  <p>Nama Produk</p>
-                  <h6>Semarang, jawa tengah</h6>
+                  <h6>Nama Produk</h6>
+                  <p>Semarang, jawa tengah</p>
+                </div>
+              </article>
+              <article>
+                <img src="<?= base_url() ?>/assets-fe/img/wisata-1.png" alt="" />
+                <div class="text">
+                  <h3>Rp.10.000,.</h3>
+                  <h6>Nama Produk</h6>
+                  <p>Semarang, jawa tengah</p>
                 </div>
               </article>
               <article>
                 <img src="<?= base_url() ?>/assets-fe/img/bg-hero.png" alt="" />
                 <div class="text">
                   <h3>Rp.10.000,.</h3>
-                  <p>Nama Produk</p>
-                  <h6>Semarang, jawa tengah</h6>
-                </div>
-              </article>
-              <article>
-                <img src="<?= base_url() ?>/assets-fe/img/bg-hero.png" alt="" />
-                <div class="text">
-                  <h3>Rp.10.000,.</h3>
-                  <p>Nama Produk</p>
-                  <h6>Semarang, jawa tengah</h6>
+                  <h6>Nama Produk</h6>
+                  <p>Semarang, jawa tengah</p>
                 </div>
               </article>
               <article>
                 <img src="<?= base_url()?>/assets-fe/img/bg-hero.png" alt="" />
                 <div class="text">
                   <h3>Rp.10.000,.</h3>
-                  <p>Nama Produk</p>
-                  <h6>Semarang, jawa tengah</h6>
+                  <h6>Nama Produk</h6>
+                  <p>Semarang, jawa tengah</p>
                 </div>
               </article>
               <article>
                 <img src="<?= base_url()?>/assets-fe/img/bg-hero.png" alt="" />
                 <div class="text">
                   <h3>Rp.10.000,.</h3>
-                  <p>Nama Produk</p>
-                  <h6>Semarang, jawa tengah</h6>
+                  <h6>Nama Produk</h6>
+                  <p>Semarang, jawa tengah</p>
                 </div>
               </article>
             </main>
@@ -75,7 +76,7 @@
                 <i class="fa fa-user-circle fa-2x "><span style="color: #0d0e6e; margin-left:1em ; font-size: 20px;">Akun Saya</span></i>
               </div>
               </div>
-              <a href="<?= base_url('/marketplacesell') ?>"> <button style="padding: 0.75rem 0" class="btn mt-4 btn-custom-primary btn-block">+ Jual Barang</button> </a>
+              <a href="<?= base_url('/marketplacesell') ?>" class="btn mt-4 text-white btn-custom-primary btn-hover-primary btn-block">Jual Barang</a>
             </div>
           </div>
         </div>

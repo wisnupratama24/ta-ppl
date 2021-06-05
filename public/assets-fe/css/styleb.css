@@ -11,6 +11,10 @@
   --title: #042852;
 }
 
+.img-publish {
+  width: 100px;
+  height: 100px;
+}
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 0.1fr);

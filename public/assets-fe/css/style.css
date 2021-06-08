@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 :root {
   --primary: #fffaf6;
@@ -24,12 +24,19 @@
   font-weight: 500;
 }
 
+.fw-600 {
+  font-weight: 600;
+}
 .fs-12 {
   font-size: 12px;
 }
 
 .fs-16 {
   font-size: 16px;
+}
+
+.fs-20 {
+  font-size: 20px;
 }
 
 .text-default {
@@ -57,11 +64,14 @@
   background-color: #f17c06;
 }
 
+.color-price {
+  color: #a50000;
+}
 /* End Custom Class */
 
 body {
   background-color: var(--primary);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 nav {
   background-color: var(--primary);
@@ -96,11 +106,11 @@ div.navbar ul li {
   color: var(--secondary);
 }
 
-<<<<<<< HEAD:assets/css/style.css ======= .navbar ul li a.active {
+.navbar ul li a.active {
   color: var(--secondary);
 }
 
->>>>>>>741f19f0a486cebb1b71cbf91ec29d2bd71ab1b1:public/assets-fe/css/style.css .navbar .menus {
+.navbar .menus {
   width: 75%;
   display: flex;
   justify-content: space-between;
@@ -205,6 +215,21 @@ div.navbar ul li {
   /* background-color: #f59e0b; */
   background-color: var(--title);
   height: 300px;
+}
+
+.custom-input-marketplace {
+  padding: 12px 20px;
+  border-radius: 8px;
+}
+.form-control:focus {
+  border-color: var(--gray-400);
+  border-bottom: 2px solid var(--secondary);
+  box-shadow: none;
+  transition: ease-in-out 0.3s;
+}
+
+.wrap-marketplace .card-product img {
+  width: 230px;
 }
 
 /* End Marketplace */
@@ -367,7 +392,7 @@ input.custom-input-group:focus {
   flex: 1;
   position: fixed;
   right: 10%;
-  width: 30%;
+  width: 20%;
   background-color: #fffaf6;
 }
 
@@ -451,6 +476,12 @@ input.custom-input-group:focus {
   /* End Login */
 
   /* Marketplace */
+  .marketplace {
+    padding-top: 10%;
+  }
+  .wrap-marketplace .card-product img {
+    width: 180px;
+  }
 
   #marketplace .bg-marketplace img {
     display: none;

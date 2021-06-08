@@ -17,9 +17,6 @@
                     <a href="<?= base_url('/loker') ?>" class="<?= $active == 'loker' ? 'active' : '' ?>"> Lowongan Kerja </a>
                 </li>
                 <li>
-                    <a href="<?= base_url('/wisata') ?>"> Wisata </a>
-                </li>
-                <li>
                     <a href="<?= base_url('/marketplace') ?>"> Marketplace </a>
                 </li>
                 <li>

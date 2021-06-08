@@ -102,7 +102,7 @@
               </form>
 			  </div>
         <center>
-          <a href="#" class="btn btn-warning btn-md" type="submit">Submit</a> 
+          <a href="<?= base_url('/MarketplacePublish') ?>" class="btn btn-warning btn-md" type="submit">Submit</a> 
           <a href="#" class="btn btn-warning btn-md" type="reset">Reset</a>
         </center>
       </section>

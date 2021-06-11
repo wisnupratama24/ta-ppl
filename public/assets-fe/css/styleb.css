@@ -11,9 +11,14 @@
   --title: #042852;
 }
 
+.barang .img {
+  height: 10px;
+  width: 50px;
+}
 .img-publish {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
+  flex-direction: row;
 }
 .grid {
   display: grid;
@@ -162,7 +167,8 @@ div.navbar ul li {
   border-radius: 1rem;
 }
 .figure img {
-  height: 300px;
+  display: flex;
+  height: 280px;
   border-radius: 1rem;
   image-rendering: pixelated;
   object-fit: cover;
@@ -175,29 +181,35 @@ div.navbar ul li {
 }
 .column {
   margin-left: 20px;
-  margin-top: 50px;
+  margin-top: 20px;
   width: 180px;
   float: left;
 }
+
 .inputs {
-  margin-top: 50px;
+  margin-top: 20px;
   float: left;
+  max-width: 55%;
 }
 .inputs h5 {
-  font-weight: 50;
-  color: #415d8d;
+  font-size: 1em;
+  font-weight: 20;
+  color: #042852;
   line-height: 1.275rem;
   margin-bottom: 24px;
 }
 
 #hero .title p {
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 300;
-  color: #9ca3af;
+  color: #798fb6;
   line-height: 1.275rem;
 }
 #hero .title h4 {
+  font-size: 1.5em;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 80;
-  color: #284d8d;
+  color: #0f254d;
   line-height: 1.275rem;
   margin-bottom: 1em;
 }
@@ -282,11 +294,20 @@ div.navbar ul li {
   line-height: 1.275rem;
 }
 .img-publish {
-  width: 20px;
-  height: 50px;
   image-rendering: pixelated;
 }
 
+.small-img-row {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  /* width: 350px; */
+  /* margin-left: 30px; */
+}
+.small-img-col img {
+  width: 50px;
+  height: 50px;
+}
 /* End Marketplace */
 
 /* Bus Trans */
@@ -565,6 +586,41 @@ input[type='reset'] {
 
   #marketplace .bg-marketplace {
     text-align: center;
+  }
+
+  .barang {
+    left: 0%;
+  }
+  .figure img {
+    display: flex;
+    width: 70%;
+    height: 200px;
+    border-radius: 1rem;
+    image-rendering: pixelated;
+    object-fit: cover;
+  }
+
+  #hero .title h4 {
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 80;
+    color: #0f254d;
+    line-height: 1.275rem;
+    margin-bottom: 1em;
+  }
+
+  .inputs h5 {
+    font-size: 0.9em;
+    font-weight: 10;
+    color: #042852;
+    line-height: 1rem;
+    margin-bottom: 24px;
+  }
+  #hero .title h2 {
+    font-weight: 500;
+    color: #dd441d;
+    line-height: 1.275rem;
+    font-size: 20px;
   }
 
   /* End Halaman home */

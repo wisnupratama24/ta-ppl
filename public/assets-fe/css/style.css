@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
   --primary: #fffaf6;
@@ -71,7 +71,7 @@
 
 body {
   background-color: var(--primary);
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 nav {
   background-color: var(--primary);
@@ -273,6 +273,10 @@ div.navbar ul li {
   overflow: auto;
 }
 
+.daftar-berita {
+  width: 750px;
+  max-width: 100%;
+}
 .daftar-lowongan {
   width: 750px;
   max-width: 100%;
@@ -283,6 +287,7 @@ div.navbar ul li {
   float: left;
   padding-right: 10px;
   margin-bottom: 10px;
+  image-rendering: pixelated;
 }
 /* End sidebar */
 /* Footer */
@@ -408,6 +413,112 @@ input.custom-input-group:focus {
   width: 90%;
 }
 
+/* Penambahan CSS BARU */
+
+/* Figure */
+.figure img {
+  display: flex;
+  width: 70%;
+  height: 200px;
+  border-radius: 1rem;
+  image-rendering: pixelated;
+  object-fit: cover;
+}
+.figure img {
+  height: auto;
+  border-radius: 0.5rem;
+  image-rendering: pixelated;
+}
+.barang {
+  left: 0%;
+}
+.figure img {
+  display: flex;
+  width: 70%;
+  height: 200px;
+  border-radius: 1rem;
+  image-rendering: pixelated;
+  object-fit: cover;
+}
+
+#hero .title h4 {
+  font-size: 1.2em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 80;
+  color: #0f254d;
+  line-height: 1.275rem;
+  margin-bottom: 1em;
+}
+
+.inputs h5 {
+  font-size: 0.9em;
+  font-weight: 10;
+  color: #042852;
+  line-height: 1rem;
+  margin-bottom: 24px;
+}
+#hero .title h2 {
+  font-weight: 500;
+  color: #dd441d;
+  line-height: 1.275rem;
+  font-size: 20px;
+}
+
+/* end Figure */
+
+/* Table */
+.column {
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 180px;
+  float: left;
+}
+
+.inputs {
+  margin-top: 20px;
+  float: left;
+  max-width: 55%;
+}
+.inputs h5 {
+  font-size: 1em;
+  font-weight: 20;
+  color: #042852;
+  line-height: 1.275rem;
+  margin-bottom: 24px;
+}
+
+/* Kotak */
+.kotak {
+  border-style: outset;
+  margin: 30px;
+  padding: 20px;
+  background-color: #fff;
+}
+input[type='submit'],
+input[type='reset'] {
+  background-color: #fb9128;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form-control-lg {
+  height: 100px;
+  font-size: 15px;
+}
+.lingkaran {
+  width: 100px;
+  height: 100px;
+  background: #dac52c;
+  border-radius: 100%;
+  margin-bottom: 1em;
+  text-align: center;
+  line-height: 130px;
+}
+/* End Kotak */
+/* end Table */
 /* End Halaman Lowongan */
 
 /* penggunaan media query pada mobile layout */
@@ -515,6 +626,15 @@ input.custom-input-group:focus {
     padding-top: 40%;
   }
 
+  #lowongan-kerja .daftar-berita {
+    padding-top: 0%;
+  }
+
+  .daftar-berita {
+    width: 100%;
+    height: auto;
+  }
+
   #lowongan-kerja .wrap-lowongan {
     width: 100%;
     height: auto;
@@ -529,5 +649,12 @@ input.custom-input-group:focus {
 @media only screen and (min-width: 280px) and (max-width: 991px) {
   .sidebar {
     display: none;
+  }
+  .berita-right {
+    display: none;
+  }
+  .grid {
+    padding-top: 100px;
+    grid-template-columns: repeat(2, 1fr);
   }
 }

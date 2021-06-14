@@ -37,7 +37,7 @@
                             </p>
                         </div>
                         <div class="dropdown-menu mt-3" aria-labelledby="dropdownMenuButton" style="width: 100%;">
-                            <a href="<?= base_url('logout') ?>" class="dropdown-item">Jualanku</a>
+                            <a href="<?= base_url('marketplace/list') ?>" class="dropdown-item">Jualanku</a>
                             <a href="<?= base_url('logout') ?>" class="dropdown-item">Logout</a>
                         </div>
                     </div>

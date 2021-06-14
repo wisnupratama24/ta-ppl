@@ -25,27 +25,50 @@ $convert = new Convert();
       <hr>
     </div>
 
-   <div>
-        <?php foreach($barang as $data) { ?>
-            <div class="card w-100">
-                <div class="card-body d-flex">
-                    <div>
-                        <img src="<?= base_url() ?>/uploads/<?= $data['image'] ?>" alt="<?= $data['nama'] ?>" style="width: 150px; height:150px;">
-                    </div>
-                    <div class="decs-product ml-3" style="line-height: 10px;">
-                        <p class="fs-20"><?= $data['nama'] ?></p>
-                        <p class="color-price fs-16">Rp. <?= $convert->ribuan($data['harga']) ?>,-</p>
-                        <p class="my-3 text-secondary" style="line-height: 1.275rem; font-size:13px;"><?= $data['deskripsi'] ?></p>
-                        <p class="mt-4 text-secondary fs-12">Posting pada  <?= $convert->tanggal_indo($data['created_at'], true) ?></p>
-                    </div>
-                </div>
-
-                <div class="button">
-
-                </div>
+    <div>
+      <?php foreach ($barang as $data) { ?>
+        <div class="card w-100 my-3">
+          <div class="card-body d-flex">
+            <div>
+              <img src="<?= base_url() ?>/uploads/<?= $data['image'] ?>" alt="<?= $data['nama'] ?>" style="width: 150px; height:150px;">
             </div>
-        <?php } ?>
-   </div>
+            <div class="decs-product ml-3" style="line-height: 10px;">
+              <div class="d-flex justify-content-between">
+                <div style="flex: 9;">
+                  <p class="fs-20">
+                    <?= $data['nama'] ?>
+                  </p>
+                </div>
+                <div style="flex: 1;">
+                  <div class="d-flex">
+                    <form action="<?= base_url('marketplace/delete') ?>" method="post">
+                      <?php csrf_field() ?>
+                      <input type="hidden" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>" class="csrf" />
+                      <input type="hidden" name="id" value="<?= $data['id'] ?>">
+                      <button type="submit" class="btn btn-danger btn-sm">
+                        <i class="far fa-trash-alt"></i>
+                      </button>
+                    </form>
+
+                    <a href="<?= base_url('marketplace/form') ?>/<?= $data['id'] ?>" class="btn btn-primary btn-sm ml-2">
+                      <i class="far fa-edit"></i>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+              <p class="color-price fs-16">Rp. <?= $convert->ribuan($data['harga']) ?>,-</p>
+              <p class="my-3 text-secondary" style="line-height: 1.275rem; font-size:13px;"><?= $data['deskripsi'] ?></p>
+              <p class="mt-4 text-secondary fs-12">Posting pada <?= $convert->tanggal_indo($data['created_at'], true) ?></p>
+            </div>
+          </div>
+
+          <div class="button">
+
+          </div>
+        </div>
+      <?php } ?>
+    </div>
   </div>
 </main>
 

@@ -19,7 +19,6 @@
     <title><?= $title ?></title>
 
     <script>
-
         function disabled_button(element) {
             console.log(element);
             $(`#${element}`).attr('disabled', true);
@@ -31,7 +30,7 @@
             return htmlFeedback;
         };
 
-          function error_handler(url, xhr, thrownError) {
+        function error_handler(url, xhr, thrownError) {
             // Swal.fire({
             //     title: '',
             //     text: "Mohon Maaf Koneksi Gagal, Data Akan Di Muat Ulang",

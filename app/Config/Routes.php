@@ -62,11 +62,12 @@ $routes->group('loker', function ($routes) {
 
 $routes->group('marketplace', function ($routes) {
 	$routes->get('/', 'Marketplace::index');
-	$routes->get('jual', 'Marketplace::jual_barang', ['filter' => 'checkMenuLogin']);
+	$routes->get('form/(:any)', 'Marketplace::form/$1', ['filter' => 'checkMenuLogin']);
+	// $routes->get('form', 'Marketplace::form', ['filter' => 'checkMenuLogin']);
 	$routes->get('list', 'Marketplace::list', ['filter' => 'checkMenuLogin']);
-	$routes->post('jual-process', 'Marketplace::submit', ['filter' => 'checkMenuLogin']);
-
-
+	$routes->get('detail/(:any)', 'Marketplace::detail/$1', ['filter' => 'checkMenuLogin']);
+	$routes->post('submit/(:any)', 'Marketplace::submit/$1', ['filter' => 'checkMenuLogin']);
+	$routes->post('delete', 'Marketplace::delete', ['filter' => 'checkMenuLogin']);
 });
 
 $routes->group('news', function ($routes) {

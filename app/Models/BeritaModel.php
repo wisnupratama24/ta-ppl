@@ -9,7 +9,7 @@ class BeritaModel extends Model
     protected $table = "berita";
     protected $primaryKey = "id";
     protected $useAutoIncrement = true;
-    protected $allowedFields = ['judul', 'slug', 'isi', 'user_id', 'image', 'created_at'];
+    protected $allowedFields = ['judul', 'slug', 'isi', 'user_id', 'image', 'status', 'created_at'];
 
     protected $db;
 

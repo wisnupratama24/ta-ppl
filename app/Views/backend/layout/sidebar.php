@@ -12,12 +12,7 @@
 
 
             <li class="menu-header">Berita</li>
-            <li class="nav-item dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-briefcase"></i></i><span>Job Fair</span></a>
-                <ul class="dropdown-menu">
-                    <li class="<?= $active == 'event' ? 'berita' : '' ?>"><a class="nav-link" href="<?= base_url('admin/event') ?>">Event</a></li>
-                </ul>
-            </li>
+            <li class="<?= $active == 'berita' ? 'active' : '' ?>"><a class="nav-link " href="<?= base_url('admin/berita') ?>"><i class="fas fa-fire"></i> <span>Berita</span></a></li>
         </ul>
     </aside>
 </div>

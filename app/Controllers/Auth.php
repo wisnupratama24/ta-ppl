@@ -61,6 +61,7 @@ class Auth extends BaseController
                 ]);
                 $output = [
                     'state' => true,
+                    'role' => $user['role_id'],
                     'token' => csrf_hash()
                 ];
                 return $this->response->setJSON($output);

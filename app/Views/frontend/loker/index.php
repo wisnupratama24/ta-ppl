@@ -58,14 +58,14 @@ $convert = new Convert();
 
                     <button style="padding: 0.75rem 0" class="btn mt-4 btn-custom-primary btn-block">Cari Lowongan</button>
 
-                    <div>
+                    <div class="">
                         <?php if (session()->get('logged_in')) { ?>
                             <a href="<?= base_url('loker/form') ?>" style="padding: 0.75rem 0" class="btn mt-4 btn-custom-primary btn-block btn-color-green">Posting Loker</a>
 
                         <?php } else { ?>
-                            <div class="d-flex mt-3">
+                            <div class="d-flex flex-column mt-3 " style="line-height: 10px;">
                                 <p>Posting Lowongan? </p>
-                                <a href="<?= base_url('/login') ?>" class="ml-2">Login Sekarang</a>
+                                <a href="<?= base_url('/login') ?>">Login Sekarang</a>
                             </div>
                         <?php } ?>
                     </div>

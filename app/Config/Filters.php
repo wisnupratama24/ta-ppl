@@ -80,6 +80,7 @@ class Filters extends BaseConfig
 		'isAdmin' => [
 			'before' => [
 				'admin/*',
+				'admin/berita/*'
 			]
 		]
 	];

@@ -65,7 +65,7 @@ $routes->group('marketplace', function ($routes) {
 	$routes->get('form/(:any)', 'Marketplace::form/$1', ['filter' => 'checkMenuLogin']);
 	// $routes->get('form', 'Marketplace::form', ['filter' => 'checkMenuLogin']);
 	$routes->get('list', 'Marketplace::list', ['filter' => 'checkMenuLogin']);
-	$routes->get('detail/(:any)', 'Marketplace::detail/$1', ['filter' => 'checkMenuLogin']);
+	$routes->get('detail/(:any)', 'Marketplace::detail/$1');
 	$routes->post('submit/(:any)', 'Marketplace::submit/$1', ['filter' => 'checkMenuLogin']);
 	$routes->post('delete', 'Marketplace::delete', ['filter' => 'checkMenuLogin']);
 });
@@ -85,6 +85,15 @@ $routes->group('news', function ($routes) {
 
 $routes->group('admin', function ($routes) {
 	$routes->get('/', 'Admin::index');
+
+	$routes->group('berita', function ($routes) {
+		$routes->get('/', 'Berita::index');
+		$routes->get('form/(:any)', 'Berita::form/$1');
+		$routes->get('form', 'Berita::form');
+		$routes->post('submit/(:any)', 'Berita::submit/$1');
+		$routes->post('submit', 'Berita::submit');
+		$routes->post('delete', 'Berita::delete');
+	});
 });
 
 /*

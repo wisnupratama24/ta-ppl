@@ -17,6 +17,34 @@
     <script src="<?= base_url() ?>/assets-fe/js/custom.js"></script>
 
     <title><?= $title ?></title>
+
+    <script>
+        function disabled_button(element) {
+            console.log(element);
+            $(`#${element}`).attr('disabled', true);
+            $(`#${element}`).html("<i class='fa fa-spin fa-spinner'> </i>");
+        }
+
+        function invalidFeedback(key, msg) {
+            var htmlFeedback = `<div class="invalid-feedback ${key}" style='margin-top:-20px;'> ${msg}</div>`;
+            return htmlFeedback;
+        };
+
+        function error_handler(url, xhr, thrownError) {
+            // Swal.fire({
+            //     title: '',
+            //     text: "Mohon Maaf Koneksi Gagal, Data Akan Di Muat Ulang",
+            //     icon: 'info',
+            // }).then((result) => {
+            //     if (result.isConfirmed) {
+            //         window.location = url;
+            //     }
+            // });
+            console.log(xhr.status);
+            console.log(xhr.responseText);
+            console.log(thrownError);
+        };
+    </script>
 </head>
 
 <body>

@@ -55,7 +55,6 @@
 <script>
     var form = document.querySelector("#form-register");
     $('#form-register').submit(function(e) {
-        disabled_button('btn-register');
         $('#alert').html('');
         e.preventDefault();
         $.ajax({
@@ -71,7 +70,7 @@
             },
             complete: function() {
                 $('#btn-register').removeAttr('disabled');
-                $('#btn-register').html("Register")
+                $('#btn-register').html("Register");
                 $('#btn-register').removeClass('btn-secondary');
                 $('#btn-register').addClass('btn-custom-primary');
             },
@@ -136,9 +135,6 @@
 
     });
 
-    function invalidFeedback(key, msg) {
-        var htmlFeedback = `<div class="invalid-feedback ${key}" style='margin-top:-20px;'> ${msg}</div>`
-        return htmlFeedback;
-    }
+    
 </script>
 <?= $this->include('frontend/auth/footer') ?>

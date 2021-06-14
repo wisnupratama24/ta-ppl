@@ -95,29 +95,30 @@
     </section>
 </main>
 
+
 <script>
-    var form = document.querySelector("#form-login");
-    $('#form-login').submit(function(e) {
-        disabled_button('btn-login');
-        $('#alert').html('');
+    $("#form-login").submit(function(e) {
+         $('#alert').html('');
         e.preventDefault();
         $.ajax({
-            url: '<?= base_url('login/process') ?>',
+            url: $(this).attr('action'),
             method: "POST",
-            data: new FormData(form),
+            data: new FormData(this),
+            contentType: false,
+            cache: false,
+            processData: false,
             dataType: "json",
             beforeSend: function() {
-                disabled_button('btn-login');
+                 disabled_button('btn-login');
             },
             complete: function() {
                 $('#btn-login').removeAttr('disabled');
-                $('#btn-login').html("Log me in")
+                $('#btn-login').html("Log me in");
                 $('#btn-login').removeClass('btn-secondary');
                 $('#btn-login').addClass('btn-custom-primary');
             },
             success: function(response) {
                 $('.csrf').val(response.token);
-                alert('test');
 
                 if (response.state == false) {
                     var responseError = response.error;
@@ -142,16 +143,14 @@
 
             },
             error: function(xhr, ajaxOptions, thrownError) {
-                error_handler("<?= base_url('register') ?>", xhr, thrownError);
+             error_handler("<?= base_url('login') ?>", xhr, thrownError);
             }
         })
 
-    });
+    })
 
-    function invalidFeedback(key, msg) {
-        var htmlFeedback = `<div class="invalid-feedback ${key}" style='margin-top:-20px;'> ${msg}</div>`
-        return htmlFeedback;
-    }
+
+
 </script>
 
 <?= $this->include('frontend/auth/footer') ?>

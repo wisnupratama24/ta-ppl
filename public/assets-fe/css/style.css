@@ -239,7 +239,8 @@ div.navbar ul li {
 }
 
 .wrap-marketplace .card-product img {
-  width: 230px;
+  width: 180px;
+  height: 180px;
 }
 
 /* End Marketplace */
@@ -601,7 +602,8 @@ input[type="reset"] {
     padding-top: 10%;
   }
   .wrap-marketplace .card-product img {
-    width: 180px;
+    width: 130px;
+    height: 130px;
   }
 
   #marketplace .bg-marketplace img {

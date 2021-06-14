@@ -4,10 +4,11 @@ namespace App\Controllers;
 
 use App\Libraries\Email;
 use App\Models\UserModel;
+use CodeIgniter\HTTP\ResponseTrait;
 
 class Auth extends BaseController
 {
-
+    use ResponseTrait;
     protected $userModel;
     protected $emailLibrary;
 
@@ -47,12 +48,15 @@ class Auth extends BaseController
                 'msg' => 'Tidak dapat menemukan email.',
                 'token' => csrf_hash()
             ];
+            // echo json_encode($output);
             return $this->response->setJSON($output);
+            // return $this->respond($output, 200);
         } else {
             if (password_verify($password, $user['password'])) {
                 session()->set([
                     'email' => md5($user['email']),
                     'nama' => $user['nama'],
+                    'user_id' => $user['id'],
                     'logged_in' => TRUE,
                     'role' => $user['role_id']
                 ]);
@@ -143,6 +147,13 @@ class Auth extends BaseController
             'title' => appName . ' | Lupa Kata Sandi'
         ];
         return view('frontend/auth/forgot_password', $data);
+    }
+
+    public function logout()
+    {
+       
+        session()->destroy();
+        return redirect()->to('/');
     }
 
     public function forgot_password_process()

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 :root {
   --primary: #fffaf6;
@@ -100,7 +100,7 @@
 
 body {
   background-color: var(--primary);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 nav {
   background-color: var(--primary);
@@ -463,8 +463,8 @@ input.custom-input-group:focus {
   padding: 20px;
   background-color: #fff;
 }
-input[type='submit'],
-input[type='reset'] {
+input[type="submit"],
+input[type="reset"] {
   background-color: #fb9128;
   border: none;
   color: white;

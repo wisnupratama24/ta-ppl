@@ -105,9 +105,6 @@
             url: '<?= base_url('login/process') ?>',
             method: "POST",
             data: new FormData(form),
-            contentType: false,
-            cache: false,
-            processData: false,
             dataType: "json",
             beforeSend: function() {
                 disabled_button('btn-login');
@@ -120,6 +117,8 @@
             },
             success: function(response) {
                 $('.csrf').val(response.token);
+                alert('test');
+
                 if (response.state == false) {
                     var responseError = response.error;
 

@@ -40,18 +40,31 @@
         </div>
       </div>
       <div class="lowongan-right pl-4">
-        <div>
-          <div class="custom-input d-flex align-items-center">
-            <span>
-              <i class="fa fa-search"></i>
-            </span>
-            <input type="text" class="custom-input-group pl-3" placeholder="Cari Barang" />
-          </div>
-        </div>
+          <div> 
+          <div>
+              <div class="custom-input d-flex align-items-center">
+                <span>
+                  <i class="fa fa-search"></i>
+                </span>
+                <input type="text" class="custom-input-group pl-3" placeholder="Cari Barang" />
+              </div>
+            </div>
 
-        <div class="">
-          <button style="padding: 0.75rem 0" class="btn mt-4 btn-custom-primary btn-block">Cari Barang</button>
-        </div>
+            <div class="">
+              <button style="padding: 0.75rem 0" class="btn mt-4 btn-custom-primary btn-block">Cari Barang</button>
+            </div>
+          </div>
+       <div>
+          <?php if(session()->get('logged_in')) { ?>
+              <a href="<?= base_url('marketplace/jual') ?>" style="padding: 0.75rem 0" class="btn mt-4 btn-custom-primary btn-block btn-color-green">Jual Barang</a>
+
+          <?php } else { ?>
+              <div class="d-flex mt-3">
+                <p>Jual barang? </p>
+                <a href="<?= base_url('/login') ?>" class="ml-2">Login Sekarang</a>
+              </div>
+          <?php } ?>
+       </div>
       </div>
     </div>
   </section>

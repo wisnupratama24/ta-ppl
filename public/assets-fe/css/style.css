@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 :root {
   --primary: #fffaf6;
@@ -8,6 +8,7 @@
   --gray-400: #9ca3af;
 
   --blue-800: #1e40af;
+  --green: #059669;
   --title: #042852;
 }
 
@@ -38,7 +39,9 @@
 .fs-20 {
   font-size: 20px;
 }
-
+.hide {
+  display: none;
+}
 .text-default {
   color: #9ca3af;
   line-height: 1.275rem;
@@ -49,6 +52,13 @@
   border: 0;
   padding: 0.5rem 1.5rem;
   border-radius: 0.5rem;
+  color: white;
+}
+
+.btn-color-green {
+  background-color: var(--green);
+}
+.btn-color-green:hover {
   color: white;
 }
 
@@ -71,7 +81,7 @@
 
 body {
   background-color: var(--primary);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 nav {
   background-color: var(--primary);
@@ -494,8 +504,8 @@ input.custom-input-group:focus {
   padding: 20px;
   background-color: #fff;
 }
-input[type='submit'],
-input[type='reset'] {
+input[type="submit"],
+input[type="reset"] {
   background-color: #fb9128;
   border: none;
   color: white;

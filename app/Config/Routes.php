@@ -38,6 +38,8 @@ $routes->group('login', function ($routes) {
 	$routes->post('process', 'Auth::login_process');
 });
 
+$routes->get('logout', 'Auth::logout');
+
 $routes->group('password', function ($routes) {
 	$routes->get('forgot', 'Auth::forgot_password');
 	$routes->post('forgot/process', 'Auth::forgot_password_process');
@@ -60,6 +62,8 @@ $routes->group('loker', function ($routes) {
 
 $routes->group('marketplace', function ($routes) {
 	$routes->get('/', 'Marketplace::index');
+	$routes->get('jual', 'Marketplace::jual_barang');
+
 });
 
 $routes->group('news', function ($routes) {

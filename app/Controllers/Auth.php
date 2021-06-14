@@ -56,6 +56,7 @@ class Auth extends BaseController
                 session()->set([
                     'email' => md5($user['email']),
                     'nama' => $user['nama'],
+                    'user_id' => $user['id'],
                     'logged_in' => TRUE,
                     'role' => $user['role_id']
                 ]);
@@ -73,11 +74,6 @@ class Auth extends BaseController
                 return $this->response->setJSON($output);
             }
         }
-$output = [
-    'state' => false
-];
-
-         return $this->response->setJSON($output);
     }
 
 
@@ -151,6 +147,13 @@ $output = [
             'title' => appName . ' | Lupa Kata Sandi'
         ];
         return view('frontend/auth/forgot_password', $data);
+    }
+
+    public function logout()
+    {
+       
+        session()->destroy();
+        return redirect()->to('/');
     }
 
     public function forgot_password_process()

@@ -56,12 +56,12 @@
           </div>
        <div>
           <?php if(session()->get('logged_in')) { ?>
-              <button style="padding: 0.75rem 0" class="btn mt-4 btn-custom-primary btn-block">Jual Barang</button>
+              <a href="<?= base_url('marketplace/jual') ?>" style="padding: 0.75rem 0" class="btn mt-4 btn-custom-primary btn-block btn-color-green">Jual Barang</a>
 
           <?php } else { ?>
-              <div class="d-flex">
-              <p>Jual barang? </p>
-              <a href="">Login Sekarang</a>
+              <div class="d-flex mt-3">
+                <p>Jual barang? </p>
+                <a href="<?= base_url('/login') ?>" class="ml-2">Login Sekarang</a>
               </div>
           <?php } ?>
        </div>

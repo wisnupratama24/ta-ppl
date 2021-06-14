@@ -29,7 +29,7 @@ class UserModel extends Model
 
     public function getByEmail($email)
     {
-        $query = $this->db->query("SELECT COUNT(*) as total, password, nama, email, role_id FROM user WHERE email = '$email'");
+        $query = $this->db->query("SELECT COUNT(*) as total, password, nama, email, role_id, id FROM user WHERE email = '$email'");
 
         return $query->getRowArray();
     }

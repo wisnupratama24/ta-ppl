@@ -19,4 +19,9 @@ class Marketplace extends BaseController
     {
         return view('frontend/marketplace/index', $this->data);
     }
+
+    public function jual_barang()
+    {
+        return view('frontend/marketplace/jual', $this->data);
+    }
 }

@@ -86,8 +86,10 @@ class Convert
         );
     }
 
-    function tanggal_indo($tanggal, $cetak_hari = false)
+    function tanggal_indo($_tanggal, $cetak_hari = false)
     {
+
+        $tanggal = substr($_tanggal, 0, 10);
         $hari = array(
             1 =>    'Senin',
             'Selasa',

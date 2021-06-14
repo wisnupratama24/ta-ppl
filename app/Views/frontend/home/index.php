@@ -1,3 +1,10 @@
+<?php
+
+use App\Libraries\Convert;
+
+$convert = new Convert();
+
+?>
 <?= $this->extend('frontend/layout/index'); ?>
 <?= $this->section('page-content'); ?>
 
@@ -27,23 +34,26 @@
             <h3 class="text-center">Informasi Lowongan Pekerjaan</h3>
         </div>
         <div class="owl-carousel d-flex justify-content-between mt-5">
-            <div class="bg-lowongan">
-                <div class="p-5">
-                    <div class="title">
-                        <h5 class="fs-16 text-white">Frontend Developer</h5>
-                        <h6 class="text-capitalize text-secondary">PT. Mencari Cinta Sejati</h6>
-                    </div>
-                    <div class="desc mt-3">
-                        <ul class="ml-0 pl-3 text-white" style="line-height: 1.75rem">
-                            <li>Fulltime - Rp. 6.000.000,-</li>
-                            <li>Semarang</li>
-                        </ul>
-                    </div>
+            <?php foreach ($loker as $lo) { ?>
+                <div class="bg-lowongan">
+                    <div class="p-5">
+                        <div class="title">
+                            <h5 class="text-white"><?= $lo['posisi'] ?></h5>
+                            <h6 class="text-capitalize text-secondary fs-12"><?= $lo['pt'] ?></h6>
+                        </div>
+                        <div class="desc mt-3">
+                            <ul class="ml-0 pl-3 text-white" style="line-height: 1.275rem">
+                                <li class="fs-12"><?= $lo['tipe'] ?> - Rp. <?= $convert->ribuan($lo['gaji']) ?>,-</li>
+                                <li class="fs-12"><?= $lo['lokasi'] ?></li>
+                                <li class="fs-12"><?= $lo['email'] ?></li>
+                            </ul>
+                        </div>
+                        <p class="fw-400 fs-12">Di posting pada, <?= $convert->tanggal_indo($lo['created_at']) ?></p>
 
-                    <p class="fw-300">Lamar sebelum Selasa, 24 Juni 2021</p>
-                    <button class="btn btn-block btn-custom-primary mt-4 btn-hover-primary">Detail Lowongan</button>
+                        <button class="btn btn-block btn-custom-primary mt-4 btn-hover-primary">Detail Lowongan</button>
+                    </div>
                 </div>
-            </div>
+            <?php } ?>
         </div>
     </section>
 

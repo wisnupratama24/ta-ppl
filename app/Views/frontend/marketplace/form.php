@@ -49,7 +49,7 @@
           <div class="form-group row">
             <label for="desc" class="col-sm-2 col-form-label">Deskripsi</label>
             <div class="col-sm-10">
-              <textarea rows="5" class="form-control custom-input-marketplace" name="deskripsi" id="deskripsi"><?= $deskripsi ?>"</textarea>
+              <textarea rows="5" class="form-control custom-input-marketplace" name="deskripsi" id="deskripsi"><?= $deskripsi ?></textarea>
             </div>
           </div>
           <div class="form-group row">

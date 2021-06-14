@@ -2,13 +2,17 @@
 
 namespace App\Controllers;
 
+use App\Models\LokerModel;
+
 class Home extends BaseController
 {
 
 	protected $data;
+	protected $lokerModel;
 
 	public function __construct()
 	{
+		$this->lokerModel = new LokerModel();
 		$this->data = [
 			'title' => 'Semarang',
 			'active' => '/'
@@ -17,6 +21,12 @@ class Home extends BaseController
 
 	public function index()
 	{
-		return view('frontend/home/index', $this->data);
+
+		$data = [
+			'title' => 'Semarang',
+			'active' => '/',
+			'loker' => $this->lokerModel->getAll()
+		];
+		return view('frontend/home/index', $data);
 	}
 }

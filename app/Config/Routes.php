@@ -70,6 +70,15 @@ $routes->group('marketplace', function ($routes) {
 	$routes->post('delete', 'Marketplace::delete', ['filter' => 'checkMenuLogin']);
 });
 
+$routes->group('loker', function ($routes) {
+	$routes->get('/', 'Loker::index');
+	$routes->get('form/(:any)', 'Loker::form/$1', ['filter' => 'checkMenuLogin']);
+	$routes->get('list', 'Loker::list', ['filter' => 'checkMenuLogin']);
+	$routes->get('detail/(:any)', 'Loker::detail/$1', ['filter' => 'checkMenuLogin']);
+	$routes->post('submit/(:any)', 'Loker::submit/$1', ['filter' => 'checkMenuLogin']);
+	$routes->post('delete', 'Loker::delete', ['filter' => 'checkMenuLogin']);
+});
+
 $routes->group('news', function ($routes) {
 	$routes->get('/', 'News::index');
 });

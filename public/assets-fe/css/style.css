@@ -186,7 +186,7 @@ div.navbar ul li {
 
 #lowongan .title h3 {
   font-weight: 500;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 #lowongan .bg-lowongan {
@@ -199,12 +199,12 @@ div.navbar ul li {
 
 #lowongan .bg-lowongan h5 {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 #lowongan .bg-lowongan p {
   font-weight: 400;
-  font-size: 13px;
+  font-size: 12px;
   color: var(--gray-300);
   line-height: 1.275rem;
 }

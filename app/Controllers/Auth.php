@@ -4,11 +4,11 @@ namespace App\Controllers;
 
 use App\Libraries\Email;
 use App\Models\UserModel;
-use CodeIgniter\HTTP\ResponseTrait;
+// use CodeIgniter\HTTP\ResponseTrait;
 
 class Auth extends BaseController
 {
-    use ResponseTrait;
+    // use ResponseTrait;
     protected $userModel;
     protected $emailLibrary;
 
@@ -284,9 +284,9 @@ class Auth extends BaseController
             return $this->response->setJSON($output);
         }
 
-        $user = $this->userModel->where('email', $email)->countAll();
+        $user = $this->userModel->getByEmail($email);
 
-        if ($user > 0) {
+        if ($user['total'] > 0) {
 
             $output = [
                 'state' => false,

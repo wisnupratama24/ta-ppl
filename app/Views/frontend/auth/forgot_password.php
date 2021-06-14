@@ -31,7 +31,7 @@
                     </div>
 
                     <div>
-                        <button type="submit" style="padding: 0.75rem 0" id="btn-forgot" class="btn mt-4 btn-custom-primary btn-block">Kirim link verifikasi</button>
+                        <button type="submit"  style="padding: 0.75rem 0" id="btn-forgot" class="btn mt-4 btn-custom-primary btn-block">Kirim link verifikasi</button>
                     </div>
                 </form>
             </div>
@@ -112,7 +112,7 @@
     });
 
     function invalidFeedback(key, msg) {
-        var htmlFeedback = `<div class="invalid-feedback ${key}" style='margin-top:-20px;'> ${msg}</div>`
+        var htmlFeedback = `<div class="invalid-feedback ${key}" style='margin-top:-20px;'> ${msg}</div>`;
         return htmlFeedback;
     }
 </script>

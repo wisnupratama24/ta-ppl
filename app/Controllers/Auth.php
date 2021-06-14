@@ -28,7 +28,6 @@ class Auth extends BaseController
     public function login()
     {
 
-
         $data = [
             'title' => appName . ' | Login'
         ];
@@ -151,7 +150,7 @@ class Auth extends BaseController
 
     public function logout()
     {
-       
+
         session()->destroy();
         return redirect()->to('/');
     }

@@ -84,7 +84,7 @@ $routes->group('news', function ($routes) {
 });
 
 $routes->group('admin', function ($routes) {
-	$routes->get('dashboard', 'Dashboard::index');
+	$routes->get('/', 'Admin::index');
 });
 
 /*

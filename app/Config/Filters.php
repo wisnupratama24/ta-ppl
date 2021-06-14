@@ -76,6 +76,11 @@ class Filters extends BaseConfig
 				'/password',
 				'password/*'
 			]
+		],
+		'isAdmin' => [
+			'before' => [
+				'admin/*',
+			]
 		]
 	];
 }

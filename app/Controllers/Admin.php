@@ -2,19 +2,20 @@
 
 namespace App\Controllers;
 
-class Dashboard extends BaseController
+class Admin extends BaseController
 {
     protected $data;
 
     public function __construct()
     {
         $this->data = [
-            'title' => 'Dashboard'
+            'title' => 'Dashboard',
+            'active' => '/'
         ];
     }
 
     public function index()
     {
-        echo "Wisnu";
+        return view('backend/dashboard/index', $this->data);
     }
 }

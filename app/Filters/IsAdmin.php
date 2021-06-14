@@ -12,9 +12,7 @@ class IsAdmin implements FilterInterface
     {
         if (session()->get('logged_in')) {
             if (session()->get('role') == 'admin') {
-                return redirect()->to(base_url('admin'));
-            } else {
-                return redirect()->to(base_url('/'));
+                return redirect()->to('admin/');
             }
         }
     }

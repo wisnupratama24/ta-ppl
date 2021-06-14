@@ -2,6 +2,7 @@
 
 namespace Config;
 
+use App\Filters\CheckMenuLogin;
 use App\Filters\IsLoggedIn;
 use CodeIgniter\Config\BaseConfig;
 use CodeIgniter\Filters\CSRF;
@@ -20,7 +21,9 @@ class Filters extends BaseConfig
 		'csrf'     => CSRF::class,
 		'toolbar'  => DebugToolbar::class,
 		'honeypot' => Honeypot::class,
-		'isLoggedIn' => IsLoggedIn::class
+		'isLoggedIn' => IsLoggedIn::class,
+		'checkMenuLogin' => CheckMenuLogin::class
+
 	];
 
 	/**
@@ -69,7 +72,7 @@ class Filters extends BaseConfig
 				'/register',
 				'register/*',
 				'/password',
-				'password/*'
+				'password/*'	
 			]
 		]
 	];

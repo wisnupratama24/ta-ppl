@@ -19,4 +19,9 @@ class BarangModel extends Model
         $this->db = \Config\Database::connect();
     }
 
+    public function getAll() {
+        $query = $this->db->query("SELECT * FROM {$this->table} ");
+        return $query->getResultArray();
+    }
+
 }

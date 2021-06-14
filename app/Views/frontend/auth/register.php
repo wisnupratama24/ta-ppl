@@ -135,9 +135,6 @@
 
     });
 
-    function invalidFeedback(key, msg) {
-        var htmlFeedback = `<div class="invalid-feedback ${key}" style='margin-top:-20px;'> ${msg}</div>`;
-        return htmlFeedback;
-    };
+    
 </script>
 <?= $this->include('frontend/auth/footer') ?>

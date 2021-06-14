@@ -6,15 +6,14 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\Filters\FilterInterface;
 
-class IsLoggedIn implements FilterInterface
+class CheckMenuLogin implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
-        if (session()->get('logged_in')) {
-            if (session()->get('role') == 'admin') {
-                return redirect()->to(base_url('admin'));
-            } 
-        } 
+        if (!(session()->get('logged_in'))) {
+            return redirect()->to('/login');
+        }
+          
     }
 
     public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)

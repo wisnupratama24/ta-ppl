@@ -17,6 +17,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="<?= base_url() ?>/assets-fe/vendor/bootstrap/js/bootstrap.min.js"></script>
     <title><?= $title ?></title>
+
+    <script>
+
+        function invalidFeedback(key, msg) {
+            var htmlFeedback = `<div class="invalid-feedback ${key}" style='margin-top:5px; text-transform:capitalize;'> ${msg}</div>`;
+            return htmlFeedback;
+        };
+        function disabled_button(element) {
+            console.log(element);
+            $(`#${element}`).attr('disabled', true);
+            $(`#${element}`).html("<i class='fa fa-spin fa-spinner'> </i>");
+        }
+    </script>
 </head>
 
 <body>

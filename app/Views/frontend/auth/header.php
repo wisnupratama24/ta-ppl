@@ -26,6 +26,11 @@
             $(`#${element}`).html("<i class='fa fa-spin fa-spinner'> </i>");
         }
 
+        function invalidFeedback(key, msg) {
+            var htmlFeedback = `<div class="invalid-feedback ${key}" style='margin-top:-20px;'> ${msg}</div>`;
+            return htmlFeedback;
+        };
+
           function error_handler(url, xhr, thrownError) {
             // Swal.fire({
             //     title: '',

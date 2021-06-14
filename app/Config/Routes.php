@@ -62,7 +62,10 @@ $routes->group('loker', function ($routes) {
 
 $routes->group('marketplace', function ($routes) {
 	$routes->get('/', 'Marketplace::index');
-	$routes->get('jual', 'Marketplace::jual_barang');
+	$routes->get('jual', 'Marketplace::jual_barang', ['filter' => 'checkMenuLogin']);
+	$routes->get('list', 'Marketplace::list', ['filter' => 'checkMenuLogin']);
+	$routes->post('jual-process', 'Marketplace::submit', ['filter' => 'checkMenuLogin']);
+
 
 });
 

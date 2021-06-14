@@ -1,3 +1,11 @@
+<?php
+
+use App\Libraries\Convert;
+
+$convert = new Convert();
+
+?>
+
 <?= $this->extend('frontend/layout/index'); ?>
 <?= $this->section('page-content'); ?>
 
@@ -6,38 +14,21 @@
   <section class="container" id="lowongan-kerja" style="margin-top: 8rem">
     <div class="d-md-flex d-block justify-content-between">
       <div class="wrap-marketplace row">
-        <div class="card-product col-md-4 col-6 mt-md-0 mt-4">
+
+      <?php foreach($barang as $data) { ?>
+        <div class="card-product  mt-md-0 mt-4">
           <div>
-            <img src="<?= base_url('uploads') ?>/default.png" alt="Foto Product">
+            <img src="<?= base_url('uploads') ?>/<?= $data['image'] ?>" alt="Foto Product">
           </div>
-          <div class="decs-product mt-3" style="line-height: 10px;">
-            <p class="fs-16">Celana Joger Keren</p>
-            <p class="color-price fs-16">Rp. 10.000,-</p>
-            <p class="mt-4 text-secondary fs-12">Post on 31 Juni 2019</p>
+          <div class="decs-product mt-3" style="line-height: 10px;width:100%;">
+            <p class="fs-16"><?= $data['nama'] ?></p>
+            <p class="color-price fs-16">Rp. <?= $convert->ribuan($data['harga']) ?>,-</p>
+            <p class="mt-4 text-secondary fs-12"><?= $convert->tanggal_indo($data['created_at'], true) ?></p>
           </div>
         </div>
 
-        <div class="card-product col-md-4 col-6 mt-md-0 mt-4">
-          <div>
-            <img src="<?= base_url('uploads') ?>/default.png" alt="Foto Product">
-          </div>
-          <div class="decs-product mt-3" style="line-height: 10px;">
-            <p class="fs-16">Celana Joger Keren</p>
-            <p class="color-price fs-16">Rp. 10.000,-</p>
-            <p class="mt-4 text-secondary fs-12">Post on 31 Juni 2019</p>
-          </div>
-        </div>
+        <?php } ?>
 
-        <div class="card-product col-md-4 col-6 mt-md-0 mt-4">
-          <div>
-            <img src="<?= base_url('uploads') ?>/default.png" alt="Foto Product">
-          </div>
-          <div class="decs-product mt-3" style="line-height: 10px;">
-            <p class="fs-16">Celana Joger Keren</p>
-            <p class="color-price fs-16">Rp. 10.000,-</p>
-            <p class="mt-4 text-secondary fs-12">Post on 31 Juni 2019</p>
-          </div>
-        </div>
       </div>
       <div class="lowongan-right pl-4">
           <div> 

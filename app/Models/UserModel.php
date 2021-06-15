@@ -19,7 +19,11 @@ class UserModel extends Model
         $this->db = \Config\Database::connect();
     }
 
-
+    public function getAll()
+    {
+        $query = $this->db->query("SELECT * FROM {$this->table} ");
+        return $query->getResultArray();
+    }
     public function getCountActivation($hash)
     {
         $query = $this->db->query("SELECT COUNT(*) as total, id, nama, is_active FROM user WHERE md5(md5(CONCAT(nama, '-', email, '-', password))) = '$hash'")->getRowArray();

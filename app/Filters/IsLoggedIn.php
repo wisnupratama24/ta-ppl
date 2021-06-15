@@ -12,9 +12,9 @@ class IsLoggedIn implements FilterInterface
     {
         if (session()->get('logged_in')) {
             if (session()->get('role') == 'admin') {
-                return redirect()->to(base_url('admin'));
-            } 
-        } 
+                return redirect()->to(base_url('admin/'));
+            }
+        }
     }
 
     public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)

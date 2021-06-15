@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>Semarang &mdash; </title>
+    <title>Semarang &mdash; <?= $title ?> </title>
 
     <!-- General CSS Files -->
     <link rel="stylesheet" href="<?= base_url('') ?>/assets-fe/vendor/bootstrap/css/bootstrap.min.css">
@@ -56,6 +56,16 @@
             });
         }
 
+        function disabled_button(element) {
+            console.log(element);
+            $(`#${element}`).attr('disabled', true);
+            $(`#${element}`).html("<i class='fa fa-spin fa-spinner'> </i>");
+        }
+
+        function invalidFeedback(key, msg) {
+            var htmlFeedback = `<div class="invalid-feedback ${key}" style='margin-top:5px;text-transform:capitalize;'> ${msg}</div>`;
+            return htmlFeedback;
+        };
 
         function error_handler(url, xhr, thrownError) {
             // Swal.fire({

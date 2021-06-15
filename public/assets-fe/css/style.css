@@ -73,6 +73,9 @@
 .btn-hover-primary:hover {
   background-color: #f17c06;
 }
+.color-secondary {
+  color: var(--secondary);
+}
 
 .color-price {
   color: #a50000;

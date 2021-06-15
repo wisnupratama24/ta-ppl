@@ -20,7 +20,7 @@
                     <a href="<?= base_url('/marketplace') ?>" class="<?= $active == 'marketplace' ? 'active' : '' ?>"> Marketplace </a>
                 </li>
                 <li>
-                    <a href="<?= base_url('/news') ?>"> Berita </a>
+                    <a href="<?= base_url('/news') ?>" class="<?= $active == 'news' ? 'active' : '' ?>"> Berita </a>
                 </li>
             </ul>
 

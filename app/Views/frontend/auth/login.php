@@ -98,7 +98,7 @@
 
 <script>
     $("#form-login").submit(function(e) {
-         $('#alert').html('');
+        $('#alert').html('');
         e.preventDefault();
         $.ajax({
             url: $(this).attr('action'),
@@ -109,7 +109,7 @@
             processData: false,
             dataType: "json",
             beforeSend: function() {
-                 disabled_button('btn-login');
+                disabled_button('btn-login');
             },
             complete: function() {
                 $('#btn-login').removeAttr('disabled');
@@ -138,19 +138,20 @@
                         $('#alert').html(htmlFailed);
                     }
                 } else {
-                    window.location.href = '/';
+                    if (response.role == 'user') {
+                        window.location.href = '/';
+                    } else {
+                        window.location.href = "<?= base_url('admin') ?>";
+                    }
                 }
 
             },
             error: function(xhr, ajaxOptions, thrownError) {
-             error_handler("<?= base_url('login') ?>", xhr, thrownError);
+                error_handler("<?= base_url('login') ?>", xhr, thrownError);
             }
         })
 
     })
-
-
-
 </script>
 
 <?= $this->include('frontend/auth/footer') ?>

@@ -28,7 +28,6 @@ class Auth extends BaseController
     public function login()
     {
 
-
         $data = [
             'title' => appName . ' | Login'
         ];
@@ -62,6 +61,7 @@ class Auth extends BaseController
                 ]);
                 $output = [
                     'state' => true,
+                    'role' => $user['role_id'],
                     'token' => csrf_hash()
                 ];
                 return $this->response->setJSON($output);
@@ -151,7 +151,7 @@ class Auth extends BaseController
 
     public function logout()
     {
-       
+
         session()->destroy();
         return redirect()->to('/');
     }

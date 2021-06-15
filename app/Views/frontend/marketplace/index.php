@@ -13,7 +13,7 @@ $convert = new Convert();
 <main class="main marketplace" style="margin-top: 16vh">
   <section class="container" id="lowongan-kerja" style="margin-top: 8rem">
     <div class="d-md-flex d-block justify-content-between">
-      <div class="wrap-marketplace row">
+      <div class="wrap-marketplace row" >
 
         <?php foreach ($barang as $data) { ?>
           <div class="card-product mr-3 mt-md-0 mt-4">

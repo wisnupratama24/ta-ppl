@@ -26,7 +26,7 @@
                             <thead>
                                 <tr class="bg-primary text-white ">
                                     <th width="5%">No</th>
-                                    <th>Judul</th>
+                                    <th width="80%">Judul</th>
                                     <th width="10%" class="text-center">Action</th>
                                 </tr>
                                 <tr>
@@ -65,5 +65,12 @@
     </div>
     <input type="hidden" name="<?= csrf_token(); ?>" value="<?= csrf_hash(); ?>" class="csrf" />
 </div>
+<?= $this->include('backend/layout/datatables') ?>
 
+<script>
+    $(document).ready(function() {
+        var table = $('#dataTable').DataTable();
+
+    });
+</script>
 <?= $this->endSection() ?>

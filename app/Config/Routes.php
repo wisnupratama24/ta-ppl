@@ -60,6 +60,11 @@ $routes->group('loker', function ($routes) {
 	$routes->get('/', 'Loker::index');
 });
 
+$routes->group('news', function ($routes) {
+	$routes->get('/', 'News::index');
+	$routes->get('detail/(:any)', 'News::detail/$1');
+});
+
 $routes->group('marketplace', function ($routes) {
 	$routes->get('/', 'Marketplace::index');
 	$routes->get('form/(:any)', 'Marketplace::form/$1', ['filter' => 'checkMenuLogin']);
@@ -85,6 +90,7 @@ $routes->group('news', function ($routes) {
 
 $routes->group('admin', function ($routes) {
 	$routes->get('/', 'Admin::index');
+
 
 	$routes->group('berita', function ($routes) {
 		$routes->get('/', 'Berita::index');

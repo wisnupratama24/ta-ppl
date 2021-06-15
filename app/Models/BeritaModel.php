@@ -21,7 +21,7 @@ class BeritaModel extends Model
 
     public function getAll()
     {
-        $query = $this->db->query("SELECT * FROM {$this->table} ");
+        $query = $this->db->query("SELECT berita.*, user.nama FROM {$this->table} LEFT JOIN user ON user.id = berita.user_id");
         return $query->getResultArray();
     }
 
@@ -35,6 +35,12 @@ class BeritaModel extends Model
     public function getById($id)
     {
         $query = $this->db->query("SELECT * FROM {$this->table} WHERE id = '$id'");
+        return $query->getRowArray();
+    }
+
+    public function getBySlug($slug)
+    {
+        $query = $this->db->query("SELECT berita.*, user.nama FROM {$this->table}  LEFT JOIN user ON user.id = berita.user_id WHERE slug = '$slug'");
         return $query->getRowArray();
     }
 }
